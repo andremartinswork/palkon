@@ -1,14 +1,14 @@
-import styled, { css } from 'styled-components';
-import PropTypes from 'prop-types';
-import DOMPurify from 'isomorphic-dompurify';
-import { rem } from 'polished';
-import { colors, spaces, texts } from '../../../styles/theme';
+import styled, { css } from "styled-components";
+import PropTypes from "prop-types";
+import DOMPurify from "isomorphic-dompurify";
+import { rem } from "polished";
+import { colors, spaces, texts } from "../../../styles/theme";
 
 function Text(props) {
   const {
     text,
     editor,
-    tag = 'div',
+    tag = "div",
     id,
     className,
     style,
@@ -24,7 +24,8 @@ function Text(props) {
     color,
     opacity,
     bold,
-    weight
+    weight,
+    spacing,
   } = props;
 
   const stylesProps = {
@@ -40,13 +41,22 @@ function Text(props) {
     bold,
     lineHeight,
     weight,
+    spacing,
     style: {
-      ...style
-    }
+      ...style,
+    },
   };
 
   if (text && editor) {
-    return <Atom as={tag} id={id} className={className} {...stylesProps} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(text) }} />;
+    return (
+      <Atom
+        as={tag}
+        id={id}
+        className={className}
+        {...stylesProps}
+        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(text) }}
+      />
+    );
   }
   return (
     <Atom as={tag} id={id} className={className} {...stylesProps}>
@@ -59,18 +69,18 @@ const Atom = styled.div`
   transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   &.pyr-32 {
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-size: ${texts[32]};
     font-weight: 500;
-    line-height: ${rem('40px')};
+    line-height: ${rem("40px")};
     color: ${colors.c_FFFFFF};
   }
 
   &.rbo-24 {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: ${texts[24]};
     font-weight: 400;
-    line-height: ${rem('36px')};
+    line-height: ${rem("36px")};
     color: ${colors.c_FFFFFF};
   }
 
@@ -138,12 +148,29 @@ const Atom = styled.div`
     css`
       font-weight: 600 !important;
     `}
+    ${({ spacing }) =>
+    spacing &&
+    css`
+      letter-spacing: ${spacing}!important;
+    `}
 `;
 
 Text.propTypes = {
   text: PropTypes.string,
   editor: PropTypes.bool,
-  tag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'span', 'div', 'p', 'label', 'strong']),
+  tag: PropTypes.oneOf([
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "h6",
+    "span",
+    "div",
+    "p",
+    "label",
+    "strong",
+  ]),
   id: PropTypes.string,
   className: PropTypes.string,
   align: PropTypes.string,
@@ -155,7 +182,7 @@ Text.propTypes = {
   maxWidth: PropTypes.string,
   opacity: PropTypes.number,
   color: PropTypes.string,
-  weight: PropTypes.number
+  weight: PropTypes.number,
   // children: PropTypes.element // NO TIME FOR THAT
   // style: PropTypes.objectOf(PropTypes.object())
 };

@@ -1,18 +1,18 @@
 import { rem } from 'polished';
 
 export const colors = {
-  c_0060FF: '#0060FF',
-  c_00FFD2: '#00FFD2',
-  c_FFFFFF: '#FFFFFF',
-  c_000000: '#000000',
-  c_1C1C1C: '#1C1C1C',
-  c_707070: '#707070',
-  c_F5F3F1: '#F5F3F1'
+  c_00BFFF: '#00BFFF',
+  c_26386E: '#26386E',
+  c_364051: '#364051',
+  c_F8FAFF: '#F8FAFF',
+  c_999DAA: '#999DAA',
+  c_FFFFFF: '#FFFFFF'
 };
 
 export const containers = {
-  xl: '1280px',
-  lg: '1120px'
+  xl: '1548px',
+  lg: '1352px',
+  md: '1158px'
 };
 
 export const spaces = {
@@ -30,6 +30,9 @@ export const spaces = {
 };
 
 export const texts = {
+  72: rem('72px'),
+  64: rem('64px'),
+  48: rem('48px'),
   32: rem('32px'),
   24: rem('24px'),
   18: rem('18px'),
