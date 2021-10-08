@@ -32,6 +32,7 @@ export const spaces = {
 export const texts = {
   72: rem('72px'),
   64: rem('64px'),
+  56: rem('56px'),
   48: rem('48px'),
   32: rem('32px'),
   24: rem('24px'),

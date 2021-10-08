@@ -8,6 +8,10 @@ import 'swiper/css/navigation';
 
 // MOLECULES
 import Fonts from '../molecules/fonts';
+import Navbar from '../molecules/navbar'
+
+// DATA
+import dataNavbar from '../molecules/navbar/data';
 
 export default function Layout(props) {
   const { children } = props;
@@ -16,6 +20,7 @@ export default function Layout(props) {
     <>
       <Global />
       <Fonts />
+      <Navbar {...dataNavbar} />
       <main>{children}</main>
     </>
   );

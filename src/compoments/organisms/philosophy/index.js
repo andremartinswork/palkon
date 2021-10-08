@@ -13,7 +13,7 @@ export default function Philosophy(props) {
 
   return (
     <Section id={id}>
-      <Space top="160" bottom="160">
+      <Space top="160" bottom="80">
         <Container lg>
           <Bar />
           <Space bottom="64">
@@ -30,7 +30,7 @@ export default function Philosophy(props) {
           />
         </Container>
         <Container md>
-          <Space top="40" bottom="160">
+          <Space top="40" bottom="120">
             <Text tag="p" className="roboto-16" maxWidth="420px">
               {description}
             </Text>
@@ -77,7 +77,7 @@ const Left = styled.div`
   width: 70px;
 
   .play-48 {
-    transform: translateY(-2rem);
+    transform: translateY(-1.8rem);
   }
 `;
 const Right = styled.div`
