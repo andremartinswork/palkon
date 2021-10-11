@@ -36,6 +36,7 @@ export const texts = {
   48: rem('48px'),
   32: rem('32px'),
   24: rem('24px'),
+  20: rem('20px'),
   18: rem('18px'),
   16: rem('16px'),
   14: rem('14px'),

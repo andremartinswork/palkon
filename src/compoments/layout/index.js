@@ -1,17 +1,19 @@
+import { ParallaxProvider } from "react-scroll-parallax";
+
 // GLOBAL STYLES
-import Global from '../../styles/global';
+import Global from "../../styles/global";
 
 // SWIPER
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 // MOLECULES
-import Fonts from '../molecules/fonts';
-import Navbar from '../molecules/navbar'
+import Fonts from "../molecules/fonts";
+import Navbar from "../molecules/navbar";
 
 // DATA
-import dataNavbar from '../molecules/navbar/data';
+import dataNavbar from "../molecules/navbar/data";
 
 export default function Layout(props) {
   const { children } = props;
@@ -20,8 +22,10 @@ export default function Layout(props) {
     <>
       <Global />
       <Fonts />
-      <Navbar {...dataNavbar} />
-      <main>{children}</main>
+      {/* <Navbar {...dataNavbar} /> */}
+      <main>
+        <ParallaxProvider>{children}</ParallaxProvider>
+      </main>
     </>
   );
 }

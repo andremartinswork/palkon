@@ -18,8 +18,20 @@ const Global = createGlobalStyle`
   html {
     font-size: 16px;
 
-    /* @media screen and (max-width: 1920px) {
-      font-size: ${between('10px', '16px', '320px', '1280px')}
+    @media screen and (max-width: 1440px) {
+      font-size: 14px;
+    }
+    @media screen and (max-width: 1310px) {
+      font-size: 13px;
+    }
+    @media screen and (max-width: 1100px) {
+      font-size: 12px;
+    }
+    /* @media screen and (max-width: 768px) {
+      font-size: 11px;
+    } */
+    /* @media screen and (max-width: 578px) {
+      font-size: 10px;
     } */
   }
 
@@ -32,7 +44,7 @@ const Global = createGlobalStyle`
   .roboto-10 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 300;
     font-size: ${texts['10']};
     line-height: 1;
     letter-spacing: 0.1em;
@@ -41,7 +53,7 @@ const Global = createGlobalStyle`
   .roboto-12 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     font-size: ${texts['12']};
     line-height: 1;
     color: ${colors.c_26386E};
@@ -50,7 +62,7 @@ const Global = createGlobalStyle`
   .roboto-14 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 300;
     font-size: ${texts['14']};
     letter-spacing: 0.4em;
     color: ${colors.c_999DAA};
@@ -63,20 +75,26 @@ const Global = createGlobalStyle`
     letter-spacing: normal;
     line-height: ${rem('32px')};
     color: ${colors.c_999DAA};
-    /* FIX EMPTY SPACE */
-    transform: translateY(-0.5rem);
+  }
+  .roboto-18 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: ${texts['18']};
+    letter-spacing: normal;
+    line-height: ${rem('26px')};
+    color: ${colors.c_26386E};
   }
   .roboto-56 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     font-size: ${texts['56']};
     letter-spacing: normal;
     line-height: ${rem('74px')};
     color: ${colors.c_00BFFF};
-    /* FIX EMPTY SPACE */
-    transform: translateY(-0.5rem);
   }
+  
   .play-72 {
     font-family: 'Playfair Display', serif;
     font-style: normal;
@@ -94,8 +112,11 @@ const Global = createGlobalStyle`
     letter-spacing: normal;
     line-height: ${rem('64px')};
     color: ${colors.c_26386E};
-    /* FIX EMPTY SPACE */
-    transform: translateY(-1rem);
+
+    @media screen and (max-width: 578px) {
+      font-size: ${texts['32']};
+      line-height: ${rem('48px')};
+    }
   }
   .play-24 {
     font-family: 'Playfair Display', serif;
@@ -105,7 +126,6 @@ const Global = createGlobalStyle`
     letter-spacing: normal;
     line-height: ${rem('40px')};
     color: ${colors.c_26386E};
-    transform: translateY(-1rem);
   }
 `;
 

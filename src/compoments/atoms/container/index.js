@@ -8,12 +8,11 @@ const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  ${({ xl }) =>
-    xl &&
-    css`
-      width: ${containers.xl};
+  ${({ xl }) => xl && css`
+    width: ${containers.xl};
+    background-color: red;
 
-      @media screen and (max-width: 1280px) {
+    /* @media screen and (max-width: 1280px) {
         width: ${containers.lg};
       }
       @media screen and (max-width: 1200px) {
@@ -24,46 +23,51 @@ const Container = styled.div`
       }
       @media screen and (max-width: 578px) {
         width: calc(100% - 48px);
-      }
-    `}
+      } */
+  `}
 
-  ${({ lg }) =>
-    lg &&
-    css`
-      width: ${containers.lg};
+  ${({ lg }) => lg && css`
+    width: ${containers.lg};
 
-      @media screen and (max-width: 1200px) {
-        width: calc(100% - 160px);
-      }
-      @media screen and (max-width: 768px) {
-        width: calc(100% - 80px);
-      }
-      @media screen and (max-width: 578px) {
-        width: calc(100% - 48px);
-      }
-    `}
-
-  ${({ md }) =>
-    md &&
-    css`
+    @media screen and (max-width: 1490px) {
       width: ${containers.md};
+    }
+    @media screen and (max-width: 1310px) {
+      width: 1024px;
+    }
+    @media screen and (max-width: 1100px) {
+      width: calc(100% - 160px);
+    }
+    @media screen and (max-width: 992px) {
+      width: calc(100% - 120px);
+    }
+    @media screen and (max-width: 768px) {
+      width: calc(100% - 80px);
+    }
+    @media screen and (max-width: 578px) {
+      width: calc(100% - 48px);
+    }
+  `}
 
-      @media screen and (max-width: 1279px) {
-        width: calc(100% - 160px);
-      }
-      @media screen and (max-width: 992px) {
-        width: calc(100% - 128px);
-      }
-      @media screen and (max-width: 768px) {
-        width: calc(100% - 80px);
-      }
-      @media screen and (max-width: 578px) {
-        width: calc(100% - 64px);
-      }
-      @media screen and (max-width: 440px) {
-        width: calc(100% - 48px);
-      }
-    `}
+  ${({ md }) => md && css`
+    width: ${containers.md};
+
+    @media screen and (max-width: 1310px) {
+      width: 1024px;
+    }
+    @media screen and (max-width: 1100px) {
+      width: calc(100% - 160px);
+    }
+    @media screen and (max-width: 992px) {
+      width: calc(100% - 120px);
+    }
+    @media screen and (max-width: 768px) {
+      width: calc(100% - 80px);
+    }
+    @media screen and (max-width: 578px) {
+      width: calc(100% - 48px);
+    }
+  `}
 `;
 
 export default Container;
