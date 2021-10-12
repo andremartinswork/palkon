@@ -28,18 +28,18 @@ import dataFooter from "../compoments/organisms/footer/data";
 export default function Home() {
   return (
     <>
-      {/* <Banner {...dataBanner} />
+      <Banner {...dataBanner} />
       <History {...dataHistory} />
-      <WhyUs {...dataWhyUs} /> */}
+      <WhyUs {...dataWhyUs} />
       <Pattern>
         <Philosophy {...dataPhilosophy} />
         <Numbers {...dataNumbers} />
       </Pattern>
       <Team {...dataTeam} />
-      {/* <Advisors {...dataAdvisors} />
+      <Advisors {...dataAdvisors} />
       <Portfolio {...dataPortfolio} />
       <Sentence {...dataSentence} />
-      <Footer {...dataFooter} /> */}
+      {/* <Footer {...dataFooter} /> */}
     </>
   );
 }

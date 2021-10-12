@@ -1,6 +1,9 @@
 // STYLED COMPONENTS
 import styled from "styled-components";
 
+// REACT REVEAL
+import Fade from "react-reveal/Fade";
+
 // ATOMS
 import Section from "../../atoms/section";
 import Text from "../../atoms/text";
@@ -17,21 +20,27 @@ export default function Banner(props) {
   return (
     <Section id={id}>
       <Content>
-        <div>
+        <div className="inner">
           <Container lg>
-            <Text tag="h1" editor text={title} className="play-72" />
+            <Fade>
+              <Text tag="h1" editor text={title} className="play-72" />
+            </Fade>
           </Container>
           <Container md>
             <Space top="40" bottom="56">
-              <Text
-                className="roboto-16"
-                color={colors.c_FFFFFF}
-                maxWidth="420px"
-              >
-                {description}
-              </Text>
+              <Fade delay={150}>
+                <Text
+                  className="roboto-16"
+                  color={colors.c_FFFFFF}
+                  maxWidth="420px"
+                >
+                  {description}
+                </Text>
+              </Fade>
             </Space>
-            <Button className="roboto-16">{buttonLabel}</Button>
+            <Fade delay={300}>
+              <Button className="roboto-16">{buttonLabel}</Button>
+            </Fade>
           </Container>
         </div>
       </Content>
@@ -51,8 +60,10 @@ export default function Banner(props) {
       </Video>
       <PositionScroll>
         <Scroll>
-          <Text className="roboto-10">{scrollLabel}</Text>
-          <IconArrows />
+          <Fade delay={600}>
+            <Text className="roboto-10">{scrollLabel}</Text>
+            <IconArrows />
+          </Fade>
         </Scroll>
       </PositionScroll>
     </Section>
@@ -67,7 +78,14 @@ const Content = styled.div`
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
-  justify-content: center;
+
+  .inner {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 578px) {
+    height: 720px;
+  }
 `;
 const Video = styled.div`
   position: absolute;
@@ -112,18 +130,19 @@ const Scroll = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 
   svg {
     margin-top: 16px;
     animation: a-scroll 1.8s infinite ease-in-out;
 
     @keyframes a-scroll {
-      0% { 
+      0% {
         transform: translateY(0);
-      } 50% { 
+      }
+      50% {
         transform: translateY(16px);
-      } 100% { 
+      }
+      100% {
         transform: translateY(0);
       }
     }

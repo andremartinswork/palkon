@@ -103,6 +103,11 @@ const Global = createGlobalStyle`
     letter-spacing: normal;
     line-height: ${rem('92px')};
     color: ${colors.c_FFFFFF};
+
+    @media screen and (max-width: 578px) {
+      font-size: ${texts['56']};
+      line-height: ${rem('72px')};
+    }
   }
   .play-48 {
     font-family: 'Playfair Display', serif;

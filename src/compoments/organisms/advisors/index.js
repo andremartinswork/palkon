@@ -1,4 +1,8 @@
+// STYLED COMPONENTS
 import styled from "styled-components";
+
+// REACT REVEAL
+import Fade from "react-reveal/Fade";
 
 // ATOMS
 import Section from "../../atoms/section";
@@ -15,11 +19,11 @@ export default function Advisors(props) {
 
   return (
     <Section id={id}>
+      <Bar left />
       <Space top="160" bottom="80">
         <Container lg>
-          <Bar />
-          <Space bottom="64">
-            <Text tag="h6" className="roboto-14">
+          <Space bottom="32">
+            <Text tag="h5" className="roboto-14" weight={500}>
               {smallTitle}
             </Text>
           </Space>
@@ -35,30 +39,33 @@ export default function Advisors(props) {
               {items &&
                 items.length > 0 &&
                 items.map((item, index) => (
-                  <Item key={String(index)}>
-                    <Text className="play-24" lineHeight={1}>
-                      {item.name}
-                    </Text>
-                    <Text
-                      className="roboto-14"
-                      spacing="normal"
-                      weight={300}
-                      color={colors.c_00BFFF}
-                    >
-                      {item.job}
-                    </Text>
-                    <Space top="32" bottom="32">
-                      <Text className="roboto-16">{item.description}</Text>
-                    </Space>
-
-                    <Button
-                      type="button"
-                      aria-label="View more"
-                      className="roboto-12"
-                    >
-                      View more
-                    </Button>
-                  </Item>
+                  <Fade key={String(index)} delay={150 * index}>
+                    <Item>
+                      <Text className="play-24" lineHeight={1}>
+                        {item.name}
+                      </Text>
+                      <Space top="16">
+                        <Text
+                          className="roboto-14"
+                          spacing="normal"
+                          weight={300}
+                          color={colors.c_00BFFF}
+                        >
+                          {item.job}
+                        </Text>
+                      </Space>
+                      <Space top="40" bottom="32">
+                        <Text className="roboto-16">{item.description}</Text>
+                      </Space>
+                      <Button
+                        type="button"
+                        aria-label="View more"
+                        className="roboto-12"
+                      >
+                        View more
+                      </Button>
+                    </Item>
+                  </Fade>
                 ))}
             </Items>
           </Space>
@@ -73,19 +80,41 @@ const Items = styled.div`
   flex-wrap: wrap;
   margin-left: -20px;
   margin-right: -20px;
+
+  .react-reveal {
+    width: calc(33.333% - 40px);
+    margin-bottom: ${spaces["80"]};
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @media screen and (max-width: 1100px) {
+      width: calc(50% - 40px);
+    }
+    @media screen and (max-width: 768px) {
+      width: calc(50% - 32px);
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+    @media screen and (max-width: 640px) {
+      width: 100%;
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
 `;
 const Item = styled.div`
-  width: calc(33.333% - 40px);
   padding-left: ${spaces["32"]};
   padding-right: ${spaces["32"]};
-  padding-top: ${spaces["48"]};
-  padding-bottom: ${spaces["32"]};
+  padding-top: ${spaces["40"]};
+  padding-bottom: ${spaces["40"]};
   box-sizing: border-box;
   background-color: ${colors.c_F8FAFF};
   border-radius: 8px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: ${spaces["80"]};
 `;
 const Button = styled.button`
   padding: 0;

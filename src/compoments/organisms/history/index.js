@@ -10,13 +10,21 @@ export default function History(props) {
 
   return (
     <Section id={id}>
+      <Bar left />
       <Space top="160" bottom="160">
         <Container lg>
-          <Bar />
           <Space bottom="64">
-            <Text className="roboto-14">{smallTitle}</Text>
+            <Text tag="h5" className="roboto-14" weight={500}>
+              {smallTitle}
+            </Text>
           </Space>
-          <Text tag="p" className="play-48" editor text={text} maxWidth="1160px"/>
+          <Text
+            tag="p"
+            className="play-48"
+            editor
+            text={text}
+            maxWidth="1160px"
+          />
         </Container>
       </Space>
     </Section>

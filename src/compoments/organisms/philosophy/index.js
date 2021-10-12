@@ -22,7 +22,7 @@ export default function Philosophy(props) {
 
   return (
     <Section id={id}>
-      <Bar />
+      <Bar left />
       <Space top="160" bottom="80">
         <Container lg>
           <Space bottom="32">

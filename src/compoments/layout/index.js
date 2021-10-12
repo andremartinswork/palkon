@@ -22,7 +22,7 @@ export default function Layout(props) {
     <>
       <Global />
       <Fonts />
-      {/* <Navbar {...dataNavbar} /> */}
+      <Navbar {...dataNavbar} />
       <main>
         <ParallaxProvider>{children}</ParallaxProvider>
       </main>

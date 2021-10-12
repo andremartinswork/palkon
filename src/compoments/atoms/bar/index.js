@@ -13,37 +13,33 @@ const Bar = styled.div`
   background-color: ${colors.c_00BFFF};
   transform: translateY(-50%);
 
-  ${({ center }) =>
-    !center &&
-    css`
-      left: calc((100vw - ${containers.lg}) / 2);
+  ${({ center }) => center && css`
+    left: 50%;
+    transform: translateY(-50%) translateX(0.5px);
+  `}
 
-      @media screen and (max-width: 1490px) {
-        left: calc((100vw - ${containers.md}) / 2);
-      }
-      @media screen and (max-width: 1310px) {
-        left: calc((100vw - 1024px) / 2);
-      }
-      @media screen and (max-width: 1100px) {
-        left: calc((100vw - 80px) / 2);
-      }
-      @media screen and (max-width: 992px) {
-        left: calc((100vw - 60px) / 2);
-      }
-      @media screen and (max-width: 768px) {
-        left: calc((100vw - 40px) / 2);
-      }
-      @media screen and (max-width: 578px) {
-        left: calc((100vw - 24px) / 2);
-      }
-    `}
+  ${({ left }) => left && css`
+    left: calc((100vw - ${containers.lg}) / 2);
 
-  ${({ center }) =>
-    center &&
-    css`
-     left: 50%;
-     transform: translateY(-50%) translateX(0.5px);
-    `}
+    @media screen and (max-width: 1490px) {
+      left: calc((100vw - ${containers.md}) / 2);
+    }
+    @media screen and (max-width: 1310px) {
+      left: calc((100vw - 1024px) / 2);
+    }
+    @media screen and (max-width: 1100px) {
+      left: 80px;
+    }
+    @media screen and (max-width: 992px) {
+      left: 60px;
+    }
+    @media screen and (max-width: 768px) {
+      left: 40px;
+    }
+    @media screen and (max-width: 578px) {
+      left: 24px;
+    }
+  `}
 `;
 
 export default Bar;

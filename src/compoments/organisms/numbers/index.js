@@ -1,5 +1,8 @@
-import React from "react";
+// STYLED COMPONENTS
 import styled from "styled-components";
+
+// REACT REVEAL
+import Fade from "react-reveal/Fade";
 
 // ATOMS
 import Section from "../../atoms/section";
@@ -26,23 +29,29 @@ export default function Numbers(props) {
         <Space top="120">
           <Container md>
             <Blocks>
-              {items.map((item, index) => (
-                <Number key={String(index)}>
-                  <Text
-                    className="roboto-14"
-                    color={colors.c_26386E}
-                    align="center"
-                    weight={500}
-                  >
-                    {item.label}
-                  </Text>
-                  <Space top="16">
-                    <Text className="roboto-56" align="center" weight={400}>
-                      {item.number}
-                    </Text>
-                  </Space>
-                </Number>
-              ))}
+              {items &&
+                items.length > 0 &&
+                items.map((item, index) => (
+                  <Number key={String(index)}>
+                    <Fade delay={150 * index}>
+                      <Text
+                        className="roboto-14"
+                        color={colors.c_26386E}
+                        align="center"
+                        weight={500}
+                      >
+                        {item.label}
+                      </Text>
+                    </Fade>
+                    <Space top="16">
+                      <Fade delay={150 * index}>
+                        <Text className="roboto-56" align="center" weight={400}>
+                          {item.number}
+                        </Text>
+                      </Fade>
+                    </Space>
+                  </Number>
+                ))}
             </Blocks>
           </Container>
         </Space>

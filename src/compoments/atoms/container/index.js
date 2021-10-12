@@ -10,20 +10,6 @@ const Container = styled.div`
 
   ${({ xl }) => xl && css`
     width: ${containers.xl};
-    background-color: red;
-
-    /* @media screen and (max-width: 1280px) {
-        width: ${containers.lg};
-      }
-      @media screen and (max-width: 1200px) {
-        width: calc(100% - 160px);
-      }
-      @media screen and (max-width: 768px) {
-        width: calc(100% - 80px);
-      }
-      @media screen and (max-width: 578px) {
-        width: calc(100% - 48px);
-      } */
   `}
 
   ${({ lg }) => lg && css`

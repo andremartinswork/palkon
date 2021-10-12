@@ -19,7 +19,7 @@ export default function Team(props) {
 
   return (
     <Section id={id} bgColor={colors.c_F8FAFF}>
-      <Bar />
+      <Bar left />
       <Space top="160" bottom="80">
         <Container lg>
           <Space bottom="32">
@@ -84,6 +84,8 @@ const Items = styled.div`
   .react-reveal {
     width: calc(33.333% - 40px);
     margin-bottom: ${spaces["80"]};
+    margin-left: 20px;
+    margin-right: 20px;
 
     @media screen and (max-width: 1100px) {
       width: calc(50% - 40px);

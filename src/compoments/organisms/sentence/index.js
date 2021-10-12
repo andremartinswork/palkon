@@ -32,7 +32,7 @@ export default function Sentence(props) {
                   <Text className="roboto-16" color={colors.c_FFFFFF} weight={500} lineHeight={1}>
                     {name}
                   </Text>
-                  <Text className="roboto-14" color={colors.c_FFFFFF} weight={300} spacing="normal" lineHeight={1}>
+                  <Text className="roboto-14" color={colors.c_FFFFFF} weight={300} spacing="normal" lineHeight={1} style={{ marginTop: '8px' }}>
                     {job}
                   </Text>
                 </Space>
@@ -59,7 +59,11 @@ const Content = styled.div`
   z-index: 2;
   display: flex;
   align-items: center;
-  background-color: rgba(33, 64, 133, 0.2);
+  background-color: rgba(33, 64, 133, 0.3);
+
+  @media screen and (max-width: 578px) {
+    min-height: auto;
+  }
 `;
 const MaxWidth = styled.div`
   max-width: 920px;

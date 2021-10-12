@@ -1,7 +1,8 @@
-import React from "react";
-
 // STYLED COMPONENTS
 import styled from "styled-components";
+
+// REACT REVEAL
+import Fade from "react-reveal/Fade";
 
 // NEXT
 import Image from "next/image";
@@ -19,7 +20,7 @@ import Text from "../../atoms/text";
 import Align from "../../atoms/align";
 
 // THEME
-import { colors } from "../../../styles/theme";
+import { colors, spaces } from "../../../styles/theme";
 import { rem } from "polished";
 
 // INSTALL SWIPER MODULES
@@ -29,11 +30,9 @@ export default function Portfolio(props) {
   const { id, title, description, items } = props;
   return (
     <Section id={id} bgColor={colors.c_26386E}>
+      <Bar center />
       <Space top="160" bottom="160">
         <Container lg>
-          <Align center>
-            <Bar />
-          </Align>
           <Text
             tag="h2"
             className="play-48"
@@ -43,7 +42,7 @@ export default function Portfolio(props) {
             align="center"
           />
           <Align center>
-            <Space top="40" bottom="120">
+            <Space top="64" bottom="120">
               <Text
                 tag="p"
                 className="roboto-16"
@@ -55,62 +54,59 @@ export default function Portfolio(props) {
               </Text>
             </Space>
           </Align>
-          </Container>
-          <Overflow>
+        </Container>
+        <Overflow>
           <Container lg>
-            
-          <Space bottom="160">
             <WrapperSwiper>
               <Swiper
                 slidesPerView={"auto"}
                 pagination={true}
-                spaceBetween={40}
+                spaceBetween={24}
                 freeMode={true}
+                breakpoints={{
+                  768: {
+                    spaceBetween: 32,
+                  },
+                  1024: {
+                    spaceBetween: 40,
+                  },
+                }}
               >
                 {items.map((item, index) => (
                   <SwiperSlide key={index}>
-                    <div className="content">
-                      <div className="image">
-                        <Image
-                          src={item.logo.href}
-                          alt={item.logo.alt}
-                          layout="fixed"
-                          objectFit="contain"
-                          objectPosition="center"
-                          width={220}
-                          height={180}
-                        />
+                    <Fade>
+                      <div className="content">
+                        <div className="image">
+                          <Image
+                            src={item.logo.href}
+                            alt={item.logo.alt}
+                            layout="fill"
+                            objectFit="contain"
+                            objectPosition="center"
+                          />
+                        </div>
+                        <Space top="32" bottom="16">
+                          <Text tag="h4" className="roboto-18" weight={400}>
+                            {item.title}
+                          </Text>
+                        </Space>
+                        <Text className="roboto-16">{item.description}</Text>
+                        <Space top="40">
+                          <Button
+                            type="button"
+                            aria-label="View more"
+                            className="roboto-12"
+                          >
+                            View more
+                          </Button>
+                        </Space>
                       </div>
-                      <Space top="32" bottom="16">
-                        <Text tag="h4" className="roboto-18" weight={400}>
-                          {item.title}
-                        </Text>
-                      </Space>
-                      <Text
-                        tag="p"
-                        className="roboto-14"
-                        weight={400}
-                        spacing="normal"
-                        lineHeight={rem("24px")}
-                      >
-                        {item.description}
-                      </Text>
-                      <Space top="40">
-                        <Button
-                          type="button"
-                          aria-label="View more"
-                          className="roboto-12"
-                        >
-                          View more
-                        </Button>
-                      </Space>
-                    </div>
+                    </Fade>
                   </SwiperSlide>
                 ))}
               </Swiper>
             </WrapperSwiper>
-          </Space>
-        </Container>
+          </Container>
         </Overflow>
       </Space>
     </Section>
@@ -121,6 +117,12 @@ const Overflow = styled.div`
   overflow-x: hidden;
 `;
 const WrapperSwiper = styled.div`
+  padding-bottom: ${spaces["160"]};
+
+  @media screen and (max-width: 578px) {
+    padding-bottom: 0;
+  }
+
   .swiper {
     overflow: visible;
 
@@ -128,14 +130,27 @@ const WrapperSwiper = styled.div`
       .swiper-slide {
         width: 338px;
         box-sizing: border-box;
-        border-radius: 8px;
         background-color: ${colors.c_FFFFFF};
-        padding: 24px;
+        padding-left: ${spaces["32"]};
+        padding-right: ${spaces["32"]};
+        padding-top: ${spaces["40"]};
+        padding-bottom: ${spaces["40"]};
+        border-radius: 8px;
+        box-sizing: border-box;
 
         .image {
+          position: relative;
           width: 100%;
           height: 180px;
           text-align: center;
+        }
+
+        @media screen and (max-width: 768px) {
+          width: 300px;
+
+          .image {
+            height: 120px;
+          }
         }
       }
     }
@@ -144,7 +159,11 @@ const WrapperSwiper = styled.div`
     .swiper-pagination-bullets.swiper-pagination-horizontal,
     .swiper-pagination-custom,
     .swiper-pagination-fraction {
-      bottom: ${rem('-160px')};
+      bottom: ${rem("-160px")};
+
+      @media screen and (max-width: 578px) {
+        display: none;
+      }
 
       .swiper-pagination-bullet {
         width: 32px;

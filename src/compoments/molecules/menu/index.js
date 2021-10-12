@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Link } from 'react-scroll';
 
 // STYLED COMPONENTS
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 // FRAMER MOTION
 import { motion } from 'framer-motion';
@@ -20,7 +20,7 @@ import { colors, spaces } from '../../../styles/theme';
 import { variantClose, variantContent, variantOverlay } from './variants';
 
 export default function Menu(props) {
-  const { items } = props;
+  const { scrolled, items } = props;
 
   const [isOpen, setIsOpen] = useState(false);
   const [animation, setAnimation] = useState(false);
@@ -39,12 +39,12 @@ export default function Menu(props) {
 
   return (
     <>
-      <Button onClick={() => setIsOpen(true)} />
+      <Button onClick={() => setIsOpen(true)} scrolled={scrolled} />
       <Modal isOpen={isOpen} onAfterOpen={onAfterOpen} onRequestClose={onRequestClose}>
         <Overlay variants={variantOverlay} initial={false} animate={animation ? 'open' : 'close'} onClick={onRequestClose} />
         <Content variants={variantContent} initial={false} animate={animation ? 'open' : 'close'}>
           <PositionButtonClose>
-            <ButtonClose onClick={onRequestClose} variants={variantClose} />
+            <ButtonClose type="button" aria-label="close menu" onClick={onRequestClose} variants={variantClose} />
           </PositionButtonClose>
           <Items>
             {items &&
@@ -94,33 +94,40 @@ const Button = styled.button`
   display: none;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 32px;
+  height: 32px;
   border: 0;
-  border-radius: 100%;
   padding: 0;
-  background-color: ${colors.c_FFFFFF};
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background-color: transparent;
+  border: none;
 
   :after {
     content: '';
     position: absolute;
-    left: 11px;
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;
-    background-color: ${colors.c_0060FF};
+    top: 8px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: ${colors.c_FFFFFF};
+    transition: all 0.5s ease;
   }
 
   :before {
     content: '';
     position: absolute;
-    right: 11px;
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;
-    background-color: ${colors.c_0060FF};
+    bottom: 8px;
+    left: 0;
+    right: 0px;
+    height: 2px;
+    background-color: ${colors.c_FFFFFF};
+    transition: all 0.5s ease;
   }
+
+  ${({ scrolled }) => scrolled && css`
+    :after, :before {
+      background-color: ${colors.c_364051};
+    }
+  `}
 
   @media screen and (max-width: 1279px) {
     display: flex;
@@ -150,7 +157,7 @@ const ButtonClose = styled(motion.button)`
     position: absolute;
     width: 24px;
     height: 1px;
-    background-color: ${colors.c_1C1C1C};
+    background-color: ${colors.c_999DAA};
     transform: rotate(45deg);
     transition: all 0.5s ease;
   }
@@ -160,7 +167,7 @@ const ButtonClose = styled(motion.button)`
     position: absolute;
     width: 24px;
     height: 1px;
-    background-color: ${colors.c_1C1C1C};
+    background-color: ${colors.c_999DAA};
     transform: rotate(-45deg);
     transition: all 0.5s ease;
   }
@@ -200,8 +207,4 @@ const Items = styled(motion.div)`
 const Item = styled(motion.div)`
   text-decoration: none;
   margin-bottom: ${spaces['40']};
-
-  /* :last-child {
-    margin-bottom: 0;
-  } */
 `;

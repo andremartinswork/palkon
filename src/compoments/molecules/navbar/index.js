@@ -3,13 +3,14 @@ import { useState, useEffect, useCallback } from "react";
 // STYLED COMPONENTS
 import styled, { css } from "styled-components";
 
+// NEXT
+import Image from "next/image";
+
 // REACT SCROLL
 import { Link } from "react-scroll";
 
 // ATOMS
-import Container from "../../atoms/container";
 import Text from "../../atoms/text";
-import LogoWhite from "../../atoms/logos/logoWhite";
 
 // MOLECULES
 import Menu from "../menu";
@@ -64,40 +65,61 @@ export default function Navbar(props) {
   }, [checkScroll]);
 
   return (
-    <Header hide={hide}>
-      
-        <Content>
-          <Left>
-            <LogoWhite className="logo" />
-          </Left>
-          <Right>
-            <Nav>
-              {items &&
-                items.length > 0 &&
-                items.map((item, index) => (
-                  <Link
-                    key={String(index)}
-                    activeClass="active"
-                    to={item.section}
-                    spy={true}
-                    smooth={true}
-                    offset={50}
-                    duration={500}
+    <Header hide={hide} scrolled={prevScroll > 400}>
+      <Content>
+        <Left scrolled={prevScroll > 400}>
+          <div className="white">
+            <div className="inner">
+              <Image
+                src="/logos/logo-white.svg"
+                alt="Logo Palkon White"
+                layout="fixed"
+                objectFit="contain"
+                width={180}
+                height={50}
+              />
+            </div>
+          </div>
+          <div className="color">
+            <div className="inner">
+              <Image
+                src="/logos/logo-color.svg"
+                alt="Logo Palkon Color"
+                layout="fixed"
+                objectFit="contain"
+                width={180}
+                height={50}
+              />
+            </div>
+          </div>
+        </Left>
+        <Right>
+          <Nav scrolled={prevScroll > 400}>
+            {items &&
+              items.length > 0 &&
+              items.map((item, index) => (
+                <Link
+                  key={String(index)}
+                  activeClass="active"
+                  to={item.section}
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                >
+                  <Text
+                    className="roboto-16"
+                    weight={500}
+                    color={colors.c_FFFFFF}
                   >
-                    <Text
-                      className="roboto-16"
-                      weight={500}
-                      color={colors.c_FFFFFF}
-                    >
-                      {item.label}
-                    </Text>
-                  </Link>
-                ))}
-            </Nav>
-            <Menu items={items} />
-          </Right>
-        </Content>
-
+                    {item.label}
+                  </Text>
+                </Link>
+              ))}
+          </Nav>
+          <Menu items={items} scrolled={prevScroll > 400} />
+        </Right>
+      </Content>
     </Header>
   );
 }
@@ -105,24 +127,33 @@ export default function Navbar(props) {
 const Header = styled.header`
   position: fixed;
   top: 0;
-  left: ${spaces['40']};
-  right: ${spaces['40']};
+  left: 0;
+  right: 0;
+  padding-left: ${spaces["40"]};
+  padding-right: ${spaces["40"]};
   z-index: 100;
-  height: 80px;
+  height: 100px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   transition: all 0.5s ease;
 
-  ${({ hide }) =>
-    hide &&
-    css`
-      opacity: 0;
-      transform: translateY(-50%);
-    `}
+  ${({ hide }) => hide && css`
+    opacity: 0;
+    transform: translateY(-100%);
+  `}
+
+  ${({ scrolled }) => scrolled && css`
+    background-color: ${colors.c_FFFFFF};
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  `}
 
   @media screen and (max-width: 992px) {
-    height: 80px;
+    height: 90px;
+  }
+  @media screen and (max-width: 578px) {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 `;
 const Content = styled.div`
@@ -132,22 +163,40 @@ const Content = styled.div`
   justify-content: space-between;
 `;
 const Left = styled.div`
-  .lettring {
-    display: none;
+  position: relative;
+  width: 180px;
+  height: 50px;
+
+  .color {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .white {
+    position: absolute;
+    transition: all 0.5s ease;
+  }
+  .iner {
+    position: relative;
+    width: 100%;
+    height: 100%;
   }
 
-  @media screen and (max-width: 992px) {
-    .logo {
-      display: none;
-    }
-    .lettring {
-      display: block;
-    }
-  }
+  ${({ scrolled }) =>
+    scrolled &&
+    css`
+      .color {
+        opacity: 1;
+      }
+      .white {
+        opacity: 0;
+      }
+    `}
 `;
 const Right = styled.div``;
 const Nav = styled.nav`
   display: flex;
+  align-items: center;
 
   a {
     margin-right: ${spaces["40"]};
@@ -157,8 +206,15 @@ const Nav = styled.nav`
       margin-right: 0;
     }
 
+    ${({ scrolled }) => scrolled && css`
+      .roboto-16 {
+        color: ${colors.c_364051}!important;
+      }
+    `}
+
     &.active {
       color: ${colors.c_00BFFF};
+
       .roboto-16 {
         color: ${colors.c_00BFFF}!important;
       }
