@@ -47,11 +47,15 @@ export default function Footer(props) {
               <Bottom>
                 <Col>
                   <Text className="play-16">{labelEmail}</Text>
-                  <Text className="roboto-16">{email}</Text>
+                  <a href={`mailto:${email}`} target="_top">
+                    <Text className="roboto-16">{email}</Text>
+                  </a>
                 </Col>
                 <Col>
                   <Text className="play-16">{labelInternship}</Text>
-                  <Text className="roboto-16">{internship}</Text>
+                  <a href={`mailto:${email}`} target="_top">
+                    <Text className="roboto-16">{internship}</Text>
+                  </a>
                 </Col>
                 <Col>
                   <Text className="play-16">{labelAddress}</Text>
@@ -94,20 +98,20 @@ export default function Footer(props) {
                 </NextLink>
               </Legal>
               <Back>
-              <Link to="banner" smooth={true} offset={0} duration={500}>
-                <BackToTop>
-                  <Text
-                    className="roboto-14"
-                    weight={400}
-                    spacing="normal"
-                    color={colors.c_00BFFF}
-                    noWrap
-                  >
-                    Back to top
-                  </Text>
-                  <ChevronDown />
-                </BackToTop>
-              </Link>
+                <Link to="banner" smooth={true} offset={0} duration={500}>
+                  <BackToTop>
+                    <Text
+                      className="roboto-14"
+                      weight={400}
+                      spacing="normal"
+                      color={colors.c_00BFFF}
+                      noWrap
+                    >
+                      Back to top
+                    </Text>
+                    <ChevronDown />
+                  </BackToTop>
+                </Link>
               </Back>
             </Flex>
           </Container>
@@ -193,6 +197,17 @@ const Col = styled.div`
       margin-bottom: 0;
     }
   }
+
+  a {
+    @media (hover: hover) and (pointer: fine) {
+      :hover {
+        
+        .roboto-16 {
+          color: ${colors.c_00BFFF};
+        }
+      }
+    }
+  }
 `;
 const Border = styled.div`
   width: 100%;
@@ -247,7 +262,7 @@ const Back = styled.div`
     display: flex;
     justify-content: flex-end;
   }
-`; 
+`;
 const BackToTop = styled.div`
   display: flex;
   align-items: center;
