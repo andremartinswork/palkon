@@ -1,8 +1,11 @@
+// NEXT
+import dynamic from 'next/dynamic';
+
 // MOLECULES
-import NavbarLegal from "../compoments/molecules/navbars/navbarLegal";
+const NavbarLegal = dynamic(() => import('../compoments/molecules/navbars/navbarLegal'));
 
 // ORGANISMS
-import Legal from "../compoments/organisms/legal";
+const Legal = dynamic(() => import('../compoments/organisms/legal'));
 
 // DATA
 import dataLegal from "../compoments/organisms/legal/data";

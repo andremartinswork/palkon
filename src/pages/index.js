@@ -1,18 +1,21 @@
+// NEXT
+import dynamic from 'next/dynamic';
+
 // MOLECULES
-import Navbar from "../compoments/molecules/navbars/navbar";
-import Pattern from "../compoments/molecules/pattern";
+const Navbar = dynamic(() => import('../compoments/molecules/navbars/navbar'));
+const Pattern = dynamic(() => import('../compoments/molecules/pattern'));
 
 // ORGANISMS
-import Banner from "../compoments/organisms/banner";
-import History from "../compoments/organisms/history";
-import WhyUs from "../compoments/organisms/whyUs";
-import Philosophy from "../compoments/organisms/philosophy";
-import Numbers from "../compoments/organisms/numbers";
-import Team from "../compoments/organisms/team";
-import Advisors from "../compoments/organisms/advisors";
-import Portfolio from "../compoments/organisms/portfolio";
-import Sentence from "../compoments/organisms/sentence";
-import Footer from "../compoments/organisms/footer";
+const Banner = dynamic(() => import('../compoments/organisms/banner'));
+const History = dynamic(() => import('../compoments/organisms/history'));
+const WhyUs = dynamic(() => import('../compoments/organisms/whyUs'));
+const Philosophy = dynamic(() => import('../compoments/organisms/philosophy'));
+const Numbers = dynamic(() => import('../compoments/organisms/numbers'));
+const Team = dynamic(() => import('../compoments/organisms/team'));
+const Advisors = dynamic(() => import('../compoments/organisms/advisors'));
+const Portfolio = dynamic(() => import('../compoments/organisms/portfolio'));
+const Sentence = dynamic(() => import('../compoments/organisms/sentence'));
+const Footer = dynamic(() => import('../compoments/organisms/footer'));
 
 // DATA
 import dataNavbar from "../compoments/molecules/navbars/navbar/data";
