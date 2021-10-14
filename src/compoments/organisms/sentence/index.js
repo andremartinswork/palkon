@@ -25,7 +25,7 @@ export default function Sentence(props) {
           <Space top="160" bottom="160">
             <Align right>
               <MaxWidth>
-                <Text tah="p" className="play-48" color={colors.c_FFFFFF}>
+                <Text tag="p" className="play-48" color={colors.c_FFFFFF}>
                   {text}
                 </Text>
                 <Space top="80">

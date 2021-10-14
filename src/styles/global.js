@@ -153,7 +153,7 @@ const Global = createGlobalStyle`
   .play-16 {
     font-family: 'Playfair Display', serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: ${texts['16']};
     letter-spacing: normal;
     line-height: 1;
