@@ -1,4 +1,5 @@
 // MOLECULES
+import Navbar from "../compoments/molecules/navbars/navbar";
 import Pattern from "../compoments/molecules/pattern";
 
 // ORGANISMS
@@ -14,6 +15,7 @@ import Sentence from "../compoments/organisms/sentence";
 import Footer from "../compoments/organisms/footer";
 
 // DATA
+import dataNavbar from "../compoments/molecules/navbars/navbar/data";
 import dataBanner from "../compoments/organisms/banner/data";
 import dataHistory from "../compoments/organisms/history/data";
 import dataWhyUs from "../compoments/organisms/whyUs/data";
@@ -28,6 +30,7 @@ import dataFooter from "../compoments/organisms/footer/data";
 export default function Home() {
   return (
     <>
+      <Navbar {...dataNavbar} />
       <Banner {...dataBanner} />
       <History {...dataHistory} />
       <WhyUs {...dataWhyUs} />
@@ -39,7 +42,7 @@ export default function Home() {
       <Advisors {...dataAdvisors} />
       <Portfolio {...dataPortfolio} />
       <Sentence {...dataSentence} />
-      {/* <Footer {...dataFooter} /> */}
+      <Footer {...dataFooter} />
     </>
   );
 }

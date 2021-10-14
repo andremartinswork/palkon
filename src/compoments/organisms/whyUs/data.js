@@ -1,5 +1,5 @@
 const data = {
-  id: 'whyUS',
+  id: 'whyUs',
   image: {
     href: '/images/whyUs/image.jpg',
     alt: 'Image'

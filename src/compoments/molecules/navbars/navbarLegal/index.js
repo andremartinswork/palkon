@@ -5,26 +5,12 @@ import styled, { css } from "styled-components";
 
 // NEXT
 import Image from "next/image";
-import { useRouter } from "next/router";
-import LinkNext from "next/link";
-
-// REACT SCROLL
-import { Link } from "react-scroll";
-
-// ATOMS
-import Text from "../../atoms/text";
-
-// MOLECULES
-import Menu from "../menu";
+import Link from "next/link";
 
 // THEME
-import { colors, spaces } from "../../../styles/theme";
+import { colors, spaces } from "../../../../styles/theme";
 
-export default function Navbar(props) {
-  const { items } = props;
-
-  const router = useRouter();
-
+export default function NavbarLegal() {
   const [prevScroll, setPrevScroll] = useState(0);
   const [prevDirection, setPrevdDirection] = useState(0);
   const [hide, setHide] = useState(false);
@@ -72,19 +58,8 @@ export default function Navbar(props) {
     <Header hide={hide} scrolled={prevScroll > 400}>
       <Content>
         <Left scrolled={prevScroll > 400}>
-          <LinkNext href="/">
+          <Link href="/">
             <a>
-              <div className="white">
-                <div className="inner">
-                  <Image
-                    src="/logos/logo-white.svg"
-                    alt="Logo Palkon White"
-                    layout="fill"
-                    objectFit="contain"
-                    loading="eager"
-                  />
-                </div>
-              </div>
               <div className="color">
                 <div className="inner">
                   <Image
@@ -97,34 +72,8 @@ export default function Navbar(props) {
                 </div>
               </div>
             </a>
-          </LinkNext>
+          </Link>
         </Left>
-        <Right>
-          <Nav scrolled={prevScroll > 400}>
-            {items &&
-              items.length > 0 &&
-              items.map((item, index) => (
-                <Link
-                  key={String(index)}
-                  activeClass="active"
-                  to={item.section}
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  <Text
-                    className="roboto-16"
-                    weight={400}
-                    color={colors.c_FFFFFF}
-                  >
-                    {item.label}
-                  </Text>
-                </Link>
-              ))}
-          </Nav>
-          <Menu items={items} scrolled={prevScroll > 400} />
-        </Right>
       </Content>
     </Header>
   );
@@ -144,13 +93,6 @@ const Header = styled.header`
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
   transition: all 0.5s ease;
-
-  /* ${({ hide }) =>
-    hide &&
-    css`
-      opacity: 0;
-      transform: translateY(-100%);
-    `} */
 
   ${({ scrolled }) =>
     scrolled &&
@@ -189,79 +131,13 @@ const Left = styled.div`
     right: 0;
     top: 0;
     bottom: 0;
-    opacity: 0;
+    opacity: 1;
     transition: all 0.5s ease;
-  }
-  .white {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    transition: all 0.5s ease;
-  }
-  .inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
 
-    img {
+    .inner {
+      position: relative;
       width: 100%;
       height: 100%;
     }
-  }
-
-  ${({ scrolled }) =>
-    scrolled &&
-    css`
-      .color {
-        opacity: 1;
-      }
-      .white {
-        opacity: 0;
-      }
-    `}
-`;
-const Right = styled.div``;
-const Nav = styled.nav`
-  display: flex;
-  align-items: center;
-
-  a {
-    margin-right: ${spaces["40"]};
-    transition: all 0.5s ease;
-
-    :last-child {
-      margin-right: 0;
-    }
-
-    ${({ scrolled }) =>
-      scrolled &&
-      css`
-        .roboto-16 {
-          color: ${colors.c_364051}!important;
-        }
-      `}
-
-    &.active {
-      color: ${colors.c_00BFFF};
-
-      .roboto-16 {
-        color: ${colors.c_00BFFF}!important;
-      }
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-      :hover {
-        cursor: pointer;
-        .roboto-16 {
-          color: ${colors.c_00BFFF}!important;
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 1279px) {
-    display: none;
   }
 `;

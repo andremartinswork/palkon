@@ -1,3 +1,4 @@
+// REACT
 import { useState } from 'react';
 
 // REACT SCROLL
@@ -50,7 +51,7 @@ export default function Menu(props) {
             {items &&
               items.length > 0 &&
               items.map((item, index) => (
-                <Link key={String(index)} activeClass='active' to={item.section} spy={true} smooth={true} offset={50} duration={500}>
+                <Link key={String(index)} activeClass='active' to={item.section} spy={true} smooth={true} offset={50} duration={500} onClick={onRequestClose}>
                   <Item
                     variants={{
                       open: {
@@ -76,7 +77,7 @@ export default function Menu(props) {
                     initial={false}
                     animate={animation ? 'open' : 'close'}
                   >
-                    <Text className='kbr-32' tag='span' weight={400} color={colors.c_1C1C1C}>
+                    <Text className='roboto-24' tag='span' weight={400} color={colors.c_26386E}>
                       {item.label}
                     </Text>
                   </Item>
@@ -132,11 +133,19 @@ const Button = styled.button`
   @media screen and (max-width: 1279px) {
     display: flex;
   }
+  @media screen and (max-width: 578px) {
+    width: 28px;
+    height: 28px;
+  }
 `;
 const PositionButtonClose = styled.div`
   position: absolute;
   top: 30px;
   right: 32px;
+
+  @media screen and (max-width: 578px) {
+    right: 24px;
+  }
 `;
 const ButtonClose = styled(motion.button)`
   position: relative;

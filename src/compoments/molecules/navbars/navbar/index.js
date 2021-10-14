@@ -5,25 +5,22 @@ import styled, { css } from "styled-components";
 
 // NEXT
 import Image from "next/image";
-import { useRouter } from "next/router";
 import LinkNext from "next/link";
 
 // REACT SCROLL
 import { Link } from "react-scroll";
 
 // ATOMS
-import Text from "../../atoms/text";
+import Text from "../../../atoms/text";
 
 // MOLECULES
-import Menu from "../menu";
+import Menu from "../../menu";
 
 // THEME
-import { colors, spaces } from "../../../styles/theme";
+import { colors, spaces } from "../../../../styles/theme";
 
 export default function Navbar(props) {
   const { items } = props;
-
-  const router = useRouter();
 
   const [prevScroll, setPrevScroll] = useState(0);
   const [prevDirection, setPrevdDirection] = useState(0);

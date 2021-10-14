@@ -1,3 +1,6 @@
+// REACT
+import { useState } from 'react';
+
 // STYLED COMPONENTS
 import styled from "styled-components";
 
@@ -19,6 +22,9 @@ import Container from "../../atoms/container";
 import Text from "../../atoms/text";
 import Align from "../../atoms/align";
 
+// MOLECULES
+import ModalPortfolio from "../../molecules/modals/modalPortfolio";
+
 // THEME
 import { colors, spaces } from "../../../styles/theme";
 import { rem } from "polished";
@@ -28,6 +34,15 @@ SwiperCore.use([Pagination]);
 
 export default function Portfolio(props) {
   const { id, title, description, items } = props;
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [selected, setSelected] = useState(false);
+
+  const toggleModal = (val) => {
+    setIsOpen(!isOpen);
+    !isOpen && setSelected(val)
+  }
+
   return (
     <Section id={id} bgColor={colors.c_26386E}>
       <Bar center />
@@ -95,7 +110,8 @@ export default function Portfolio(props) {
                           <Button
                             type="button"
                             aria-label="View more"
-                            className="roboto-12"
+                            className="roboto-14"
+                            onClick={() => toggleModal(item)}
                           >
                             View more
                           </Button>
@@ -109,6 +125,11 @@ export default function Portfolio(props) {
           </Container>
         </Overflow>
       </Space>
+      <ModalPortfolio
+        selected={selected}
+        toggleModal={toggleModal}
+        isOpen={isOpen}
+      />
     </Section>
   );
 }
@@ -128,7 +149,7 @@ const WrapperSwiper = styled.div`
 
     .swiper-wrapper {
       .swiper-slide {
-        width: 338px;
+        width: 400px;
         box-sizing: border-box;
         background-color: ${colors.c_FFFFFF};
         padding-left: ${spaces["32"]};
@@ -143,6 +164,10 @@ const WrapperSwiper = styled.div`
           width: 100%;
           height: 180px;
           text-align: center;
+        }
+
+        @media screen and (max-width: 1440px) {
+          width: 338px;
         }
 
         @media screen and (max-width: 768px) {
@@ -182,7 +207,10 @@ const Button = styled.button`
   padding: 0;
   border: none;
   background-color: transparent;
-  color: ${colors.c_00BFFF};
+  color: ${colors.c_00BFFF}!important;
+  letter-spacing: normal!important;
+  font-weight: 400!important;
+  transition: all 0.5s ease;
 
   @media (hover: hover) and (pointer: fine) {
     :hover {

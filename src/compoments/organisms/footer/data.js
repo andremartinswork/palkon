@@ -31,10 +31,6 @@ const data = {
     {
       label: 'Portfolio',
       section: 'portfolio'
-    },
-    {
-      label: 'Contact Us',
-      section: 'footer'
     }
   ]
 }

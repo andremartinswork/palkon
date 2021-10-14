@@ -1,3 +1,6 @@
+// REACT
+import { useState } from 'react';
+
 // STYLED COMPONENTS
 import styled from "styled-components";
 
@@ -11,11 +14,22 @@ import Text from "../../atoms/text";
 import Bar from "../../atoms/bar";
 import Container from "../../atoms/container";
 
+// MOLECULES
+import ModalPeople from '../../molecules/modals/modalPeople';
+
 // THEME
 import { colors, spaces } from "../../../styles/theme";
 
 export default function Advisors(props) {
   const { id, smallTitle, title, items } = props;
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [selected, setSelected] = useState(false);
+
+  const toggleModal = (val) => {
+    setIsOpen(!isOpen);
+    !isOpen && setSelected(val)
+  }
 
   return (
     <Section id={id}>
@@ -60,7 +74,8 @@ export default function Advisors(props) {
                       <Button
                         type="button"
                         aria-label="View more"
-                        className="roboto-12"
+                        className="roboto-14"
+                        onClick={() => toggleModal(item)}
                       >
                         View more
                       </Button>
@@ -71,6 +86,11 @@ export default function Advisors(props) {
           </Space>
         </Container>
       </Space>
+      <ModalPeople 
+        selected={selected}
+        toggleModal={toggleModal}
+        isOpen={isOpen}
+      />
     </Section>
   );
 }
@@ -120,11 +140,15 @@ const Button = styled.button`
   padding: 0;
   border: none;
   background-color: transparent;
+  color: ${colors.c_00BFFF}!important;
+  letter-spacing: normal!important;
+  font-weight: 400!important;
+  transition: all 0.5s ease;
 
   @media (hover: hover) and (pointer: fine) {
     :hover {
       cursor: pointer;
-      color: ${colors.c_00BFFF}!important;
+      color: ${colors.c_26386E}!important;
     }
   }
 `;

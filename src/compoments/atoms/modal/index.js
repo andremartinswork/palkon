@@ -9,7 +9,7 @@ const customStyles = {
     left: 0,
     right: 0,
     bottom: 0,
-    zIndex: '1000',
+    zIndex: '100000000000',
     background: 'transparent'
   },
   content: {
@@ -53,7 +53,6 @@ Modal.propTypes = {
   isOpen: PropTypes.bool,
   onAfterOpen: PropTypes.func,
   onRequestClose: PropTypes.func,
-  children: PropTypes.element
 };
 
 export default Modal;
