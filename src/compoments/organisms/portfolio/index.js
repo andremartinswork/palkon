@@ -105,7 +105,7 @@ export default function Portfolio(props) {
                             {item.title}
                           </Text>
                         </Space>
-                        <Text className="roboto-16">{item.description}</Text>
+                        <Text className="roboto-16" ellipsis={3}>{item.description}</Text>
                         <Space top="40">
                           <Button
                             type="button"

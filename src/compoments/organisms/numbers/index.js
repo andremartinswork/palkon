@@ -39,6 +39,7 @@ export default function Numbers(props) {
                         color={colors.c_26386E}
                         align="center"
                         weight={500}
+                        uppercase
                       >
                         {item.label}
                       </Text>

@@ -69,7 +69,7 @@ export default function Team(props) {
                         </Text>
                       </Space>
                       <Space top="40" bottom="32">
-                        <Text className="roboto-16">{item.description}</Text>
+                        <Text className="roboto-16" ellipsis={3}>{item.description}</Text>
                       </Space>
                       <Button
                         type="button"

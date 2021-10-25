@@ -54,7 +54,7 @@ export default function ModalPeople(props) {
             {selected.job}
           </Text>
         </Space>
-        <Text editor className="roboto-16" text={selected.text} />
+        <Text tag="p" editor className="roboto-16" text={selected.text} />
         {selected && (selected.linkedIn || selected.facebook) && (
           <Space top="160">
             <Social>

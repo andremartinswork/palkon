@@ -3,16 +3,16 @@ const data = {
   title: 'A snapshot of our numbers',
   items: [
     {
-      label: 'PROVIDENT SED',
-      number: '500M'
+      label: 'Capital deployed',
+      number: '$800M'
     },
     {
-      label: 'CUPIDITATE',
-      number: '+20'
+      label: 'Portfolio Companies',
+      number: '15'
     },
     {
-      label: 'INVENTORE',
-      number: '100'
+      label: 'IPOs and Acquisitions',
+      number: '12'
     }
   ]
 }

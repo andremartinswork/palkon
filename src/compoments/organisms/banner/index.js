@@ -26,7 +26,7 @@ export default function Banner(props) {
               <Text tag="h1" editor text={title} className="play-72" />
             </Fade>
           </Container>
-          <Container md>
+          {/* <Container md>
             <Space top="40" bottom="56">
               <Fade delay={150}>
                 <Text
@@ -41,7 +41,7 @@ export default function Banner(props) {
             <Fade delay={300}>
               <Button className="roboto-16">{buttonLabel}</Button>
             </Fade>
-          </Container>
+          </Container> */}
         </div>
       </Content>
       <Video>
