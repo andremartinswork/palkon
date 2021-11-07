@@ -12,7 +12,7 @@ import Image from "next/image";
 
 // SWIPER
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination } from "swiper";
+import SwiperCore, { Pagination, Navigation } from "swiper";
 
 // ATOMS
 import Section from "../../atoms/section";
@@ -30,7 +30,7 @@ import { colors, spaces } from "../../../styles/theme";
 import { rem } from "polished";
 
 // INSTALL SWIPER MODULES
-SwiperCore.use([Pagination]);
+SwiperCore.use([Pagination, Navigation]);
 
 export default function Portfolio(props) {
   const { id, title, description, items } = props;
@@ -76,8 +76,10 @@ export default function Portfolio(props) {
               <Swiper
                 slidesPerView={"auto"}
                 pagination={true}
+                navigation={true}
                 spaceBetween={24}
                 freeMode={true}
+                grabCursor={true}
                 breakpoints={{
                   768: {
                     spaceBetween: 32,
@@ -200,6 +202,105 @@ const WrapperSwiper = styled.div`
       .swiper-pagination-bullet-active {
         background-color: ${colors.c_00BFFF}!important;
       }
+    }
+
+    .swiper-button-prev {
+      left: calc((100vw - 1352px) / -2);
+      top: 43%;
+      width: 64px;
+      height: 120px;
+      background-color: ${colors.c_00BFFF};
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      transition: all 0.5s ease;
+      opacity: 0.9;
+
+      :after {
+        color: ${colors.c_FFFFFF};
+        font-size: 32px;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        :hover {
+          opacity: 1;
+        }
+      }
+
+      @media screen and (max-width: 1490px) {
+        left: calc((100vw - 1158px) / -2);
+      }
+      @media screen and (max-width: 1310px) {
+        left: calc((100vw - 1024px) / -2);
+      }
+      @media screen and (max-width: 1100px) {
+        left: -80px;
+        width: 56px;
+        height: 92px;
+
+        :after {
+          font-size: 20px;
+        }
+      }
+      @media screen and (max-width: 992px) {
+        left: -60px;
+      }
+      @media screen and (max-width: 768px) {
+        left: -40px;
+      }
+      @media screen and (max-width: 578px) {
+        display: none;
+      }
+    }
+    .swiper-button-next {
+      top: 43%;
+      right: calc((100vw - 1352px) / -2);
+      width: 64px;
+      height: 120px;
+      background-color: ${colors.c_00BFFF};
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      transition: all 0.5s ease;
+      opacity: 0.9;
+
+      :after {
+        color: ${colors.c_FFFFFF};
+        font-size: 32px;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        :hover {
+          opacity: 1;
+        }
+      }
+
+      @media screen and (max-width: 1490px) {
+        right: calc((100vw - 1158px) / -2);
+      }
+      @media screen and (max-width: 1310px) {
+        right: calc((100vw - 1024px) / -2);
+      }
+      @media screen and (max-width: 1100px) {
+        right: -80px;
+        width: 56px;
+        height: 92px;
+
+        :after {
+          font-size: 20px;
+        }
+      }
+      @media screen and (max-width: 992px) {
+        right: -60px;
+      }
+      @media screen and (max-width: 768px) {
+        right: -40px;
+      }
+      @media screen and (max-width: 578px) {
+        display: none;
+      }
+    }
+
+    .swiper-button-disabled {
+      opacity: 0;
     }
   }
 `;

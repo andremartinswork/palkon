@@ -1,7 +1,7 @@
 const data = {
   id: 'team',
   smallTitle: 'OUR TEAM',
-  title: 'Possimus voluptas magnam perferendis quod quia quam. Veniam dolorem id.',
+  title: "With over four decades of experience, our investment staff partners with companies developing medical breakthroughs. An institutional grade operations team underpins the firm's infrastructure, providing a premium level of service.",
   items: [
     {
       name: 'Shaheen Wirk',

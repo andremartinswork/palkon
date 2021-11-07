@@ -26,7 +26,8 @@ export const spaces = {
   40: rem('40px'),
   32: rem('32px'),
   24: rem('24px'),
-  16: rem('16px')
+  16: rem('16px'),
+  8: rem('8px')
 };
 
 export const texts = {

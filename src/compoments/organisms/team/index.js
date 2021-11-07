@@ -46,7 +46,7 @@ export default function Team(props) {
             className="play-48"
             editor
             text={title}
-            maxWidth="770px"
+            maxWidth="1160px"
           />
           <Space top="120">
             <Items>

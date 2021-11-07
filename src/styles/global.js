@@ -141,6 +141,20 @@ const Global = createGlobalStyle`
       line-height: ${rem('48px')};
     }
   }
+  .play-32 {
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: ${texts['32']};
+    letter-spacing: 1px;
+    line-height: ${rem('40px')};
+    color: ${colors.c_26386E};
+
+    @media screen and (max-width: 578px) {
+      font-size: ${texts['24']};
+      line-height: ${rem('48px')};
+    }
+  }
   .play-24 {
     font-family: 'Playfair Display', serif;
     font-style: normal;

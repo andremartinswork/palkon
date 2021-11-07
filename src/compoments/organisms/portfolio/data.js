@@ -5,7 +5,7 @@ const data = {
   items: [
     {
       logo: {
-        href: '/images/portfolio/constellation.png',
+        href: '/images/portfolio/logos/constellation.png',
         alt: 'Constellation Pharmaceuticals',
       },
       title: 'Constellation Pharmaceuticals',
@@ -17,7 +17,7 @@ const data = {
     },
     {
       logo: {
-        href: '/images/portfolio/constellation.png',
+        href: '/images/portfolio/logos/HeartWare.jpeg',
         alt: 'HeartWare',
       },
       title: 'HeartWare',
@@ -29,7 +29,7 @@ const data = {
     },
     {
       logo: {
-        href: '/images/portfolio/constellation.png',
+        href: '/images/portfolio/logos/Ignyta.jpeg',
         alt: 'Ignyta',
       },
       title: 'Ignyta',
@@ -41,7 +41,7 @@ const data = {
     },
     {
       logo: {
-        href: '/images/portfolio/constellation.png',
+        href: '/images/portfolio/logos/Immunomedics.png',
         alt: 'Immunomedics',
       },
       title: 'Immunomedics',
@@ -53,7 +53,7 @@ const data = {
     },
     {
       logo: {
-        href: '/images/portfolio/constellation.png',
+        href: '/images/portfolio/logos/InterMune.jpeg',
         alt: 'InterMune Pharmaceuticals',
       },
       title: 'InterMune Pharmaceuticals',
@@ -65,7 +65,7 @@ const data = {
     },
     {
       logo: {
-        href: '/images/portfolio/constellation.png',
+        href: '/images/portfolio/logos/kadmon.png',
         alt: 'Kadmon',
       },
       title: 'Kadmon',
@@ -77,7 +77,7 @@ const data = {
     },
     {
       logo: {
-        href: '/images/portfolio/constellation.png',
+        href: '/images/portfolio/logos/Kythera.png',
         alt: 'KYTHERA Biopharmaceuticals',
       },
       title: 'KYTHERA Biopharmaceuticals',
@@ -89,7 +89,7 @@ const data = {
     },
     {
       logo: {
-        href: '/images/portfolio/constellation.png',
+        href: '/images/portfolio/logos/tmc.jpeg',
         alt: 'The Medicines Company',
       },
       title: 'The Medicines Company',
@@ -101,19 +101,7 @@ const data = {
     },
     {
       logo: {
-        href: '/images/portfolio/constellation.png',
-        alt: 'Kadmon',
-      },
-      title: 'Kadmon',
-      description: '',
-      text: "",
-      linkedIn: '',
-      facebook: '',
-      website: ''
-    },
-    {
-      logo: {
-        href: '/images/portfolio/constellation.png',
+        href: '/images/portfolio/logos/paige.png',
         alt: 'Paige',
       },
       title: 'Paige',
@@ -125,7 +113,7 @@ const data = {
     },
     {
       logo: {
-        href: '/images/portfolio/constellation.png',
+        href: '/images/portfolio/logos/Receptos.png',
         alt: 'Receptos',
       },
       title: 'Receptos',
@@ -137,7 +125,7 @@ const data = {
     },
     {
       logo: {
-        href: '/images/portfolio/constellation.png',
+        href: '/images/portfolio/logos/Salix.jpeg',
         alt: 'Salix Pharma',
       },
       title: 'Salix Pharma',
@@ -149,7 +137,7 @@ const data = {
     },
     {
       logo: {
-        href: '/images/portfolio/constellation.png',
+        href: '/images/portfolio/logos/Spark.png',
         alt: 'Spark Therapeutics',
       },
       title: 'Spark Therapeutics',
@@ -161,7 +149,7 @@ const data = {
     },
     {
       logo: {
-        href: '/images/portfolio/constellation.png',
+        href: '/images/portfolio/logos/SqzBio.png',
         alt: 'SQZ Biotechnologies',
       },
       title: 'SQZ Biotechnologies',
@@ -173,7 +161,7 @@ const data = {
     },
     {
       logo: {
-        href: '/images/portfolio/constellation.png',
+        href: '/images/portfolio/logos/Tvardi.jpeg',
         alt: 'Tvardi Therapeutics',
       },
       title: 'Tvardi Therapeutics',

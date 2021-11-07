@@ -20,12 +20,13 @@ export default function Sentence(props) {
   const { id, text, name, job, image } = props;
   return (
     <Section id={id}>
+      <Wrapper>
       <Content>
         <Container lg>
           <Space top="160" bottom="160">
             <Align right>
               <MaxWidth>
-                <Text tag="p" className="play-48" color={colors.c_FFFFFF}>
+                <Text tag="p" className="play-32" color={colors.c_FFFFFF}>
                   {text}
                 </Text>
                 <Space top="80">
@@ -46,12 +47,21 @@ export default function Sentence(props) {
         alt={image.alt}
         layout="fill"
         objectFit="cover"
-        objectPosition="top"
+        objectPosition="center"
       />
+      </Wrapper>
     </Section>
   );
 }
 
+const Wrapper = styled.div`
+  @media screen and (max-width: 1100px) {
+    img {
+      object-position: left center!important;
+    }
+  }
+ 
+`;
 const Content = styled.div`
   position: relative;
   width: 100%;

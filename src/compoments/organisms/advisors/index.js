@@ -1,11 +1,14 @@
 // REACT
-import { useState } from 'react';
+import { useState } from "react";
 
 // STYLED COMPONENTS
 import styled from "styled-components";
 
 // REACT REVEAL
 import Fade from "react-reveal/Fade";
+
+// NEXT
+import Image from "next/image";
 
 // ATOMS
 import Section from "../../atoms/section";
@@ -15,10 +18,11 @@ import Bar from "../../atoms/bar";
 import Container from "../../atoms/container";
 
 // MOLECULES
-import ModalPeople from '../../molecules/modals/modalPeople';
+import ModalPeople from "../../molecules/modals/modalPeople";
 
 // THEME
 import { colors, spaces } from "../../../styles/theme";
+import image from "next/image";
 
 export default function Advisors(props) {
   const { id, smallTitle, title, items } = props;
@@ -28,8 +32,8 @@ export default function Advisors(props) {
 
   const toggleModal = (val) => {
     setIsOpen(!isOpen);
-    !isOpen && setSelected(val)
-  }
+    !isOpen && setSelected(val);
+  };
 
   return (
     <Section id={id}>
@@ -46,7 +50,7 @@ export default function Advisors(props) {
             className="play-48"
             editor
             text={title}
-            maxWidth="770px"
+            maxWidth="960px"
           />
           <Space top="120">
             <Items>
@@ -55,21 +59,38 @@ export default function Advisors(props) {
                 items.map((item, index) => (
                   <Fade key={String(index)} delay={150 * index}>
                     <Item>
-                      <Text className="play-24" lineHeight={1}>
-                        {item.name}
-                      </Text>
-                      <Space top="16">
-                        <Text
-                          className="roboto-14"
-                          spacing="normal"
-                          weight={300}
-                          color={colors.c_00BFFF}
-                        >
-                          {item.job}
+                      <Wrapper>
+                        {item.image && item.image.href && (
+                          <Relative>
+                            <Image
+                              src={item.image.href}
+                              alt={item.name}
+                              layout="fill"
+                              objectFit="cover"
+                              objectPosition="center"
+                            />
+                          </Relative>
+                        )}
+                        <div>
+                          <Text className="play-24" lineHeight={1}>
+                            {item.name}
+                          </Text>
+                          <Space top="8">
+                            <Text
+                              className="roboto-14"
+                              spacing="normal"
+                              weight={300}
+                              color={colors.c_00BFFF}
+                            >
+                              {item.job}
+                            </Text>
+                          </Space>
+                        </div>
+                      </Wrapper>
+                      <Space top="32" bottom="32">
+                        <Text className="roboto-16" ellipsis={3}>
+                          {item.description}
                         </Text>
-                      </Space>
-                      <Space top="40" bottom="32">
-                        <Text className="roboto-16">{item.description}</Text>
                       </Space>
                       <Button
                         type="button"
@@ -86,7 +107,7 @@ export default function Advisors(props) {
           </Space>
         </Container>
       </Space>
-      <ModalPeople 
+      <ModalPeople
         selected={selected}
         toggleModal={toggleModal}
         isOpen={isOpen}
@@ -130,19 +151,31 @@ const Items = styled.div`
 const Item = styled.div`
   padding-left: ${spaces["32"]};
   padding-right: ${spaces["32"]};
-  padding-top: ${spaces["40"]};
-  padding-bottom: ${spaces["40"]};
+  padding-top: ${spaces["32"]};
+  padding-bottom: ${spaces["32"]};
   box-sizing: border-box;
   background-color: ${colors.c_F8FAFF};
   border-radius: 8px;
+`;
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+const Relative = styled.div`
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-right: 16px;
 `;
 const Button = styled.button`
   padding: 0;
   border: none;
   background-color: transparent;
   color: ${colors.c_00BFFF}!important;
-  letter-spacing: normal!important;
-  font-weight: 400!important;
+  letter-spacing: normal !important;
+  font-weight: 400 !important;
   transition: all 0.5s ease;
 
   @media (hover: hover) and (pointer: fine) {
