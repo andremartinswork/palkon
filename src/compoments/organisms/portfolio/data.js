@@ -1,7 +1,7 @@
 const data = {
   id: 'portfolio',
-  title: 'Our Portfolio',
-  description: 'Ut molestias architecto maxime et saepe sunt soluta laudantium impedit. A eaque cupiditate voluptatem voluptates ut soluta.',
+  title: 'Portfolio Highlights',
+  description: '',
   items: [
     {
       logo: {

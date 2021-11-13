@@ -1,6 +1,6 @@
 const data = {
-  title: 'Our Contacts',
-  description: 'Ut molestias architecto maxime et saepe sunt soluta laudantium impedit. A eaque cupiditate voluptatem voluptates ut soluta.',
+  title: 'Contact Us',
+  description: 'We are always interested in partnering with talented people. Please reach out if you would like to explore a collaboration, have an opportunity that warrants consideration, or simply wish to learn more about us.',
   labelEmail: 'Email',
   email: 'info@palkoncap.com',
   labelInternship: 'Internship opportunities',

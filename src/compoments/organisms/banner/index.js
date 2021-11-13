@@ -7,15 +7,11 @@ import Fade from "react-reveal/Fade";
 // ATOMS
 import Section from "../../atoms/section";
 import Text from "../../atoms/text";
-import Space from "../../atoms/space";
 import Container from "../../atoms/container";
 import IconArrows from "../../atoms/icons/iconArrows";
 
-// THEME
-import { colors, spaces } from "../../../styles/theme";
-
 export default function Banner(props) {
-  const { id, title, description, buttonLabel, scrollLabel, video } = props;
+  const { id, title, scrollLabel, video } = props;
 
   return (
     <Section id={id}>
@@ -26,22 +22,6 @@ export default function Banner(props) {
               <Text tag="h1" editor text={title} className="play-72" />
             </Fade>
           </Container>
-          {/* <Container md>
-            <Space top="40" bottom="56">
-              <Fade delay={150}>
-                <Text
-                  className="roboto-16"
-                  color={colors.c_FFFFFF}
-                  maxWidth="420px"
-                >
-                  {description}
-                </Text>
-              </Fade>
-            </Space>
-            <Fade delay={300}>
-              <Button className="roboto-16">{buttonLabel}</Button>
-            </Fade>
-          </Container> */}
         </div>
       </Content>
       <Video>
@@ -96,24 +76,9 @@ const Video = styled.div`
 
   video {
     object-fit: cover;
-  }
-`;
-const Button = styled.div`
-  display: inline-block;
-  padding-left: ${spaces["40"]};
-  padding-right: ${spaces["40"]};
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: ${colors.c_26386E};
-  color: ${colors.c_FFFFFF}!important;
-  font-weight: 500 !important;
-  line-height: 1;
-  transition: all 0.4s ease;
 
-  @media (hover: hover) and (pointer: fine) {
-    :hover {
-      cursor: pointer;
-      background-color: ${colors.c_00BFFF};
+    @media screen and (max-width: 1024px) {
+     object-position: 70%;
     }
   }
 `;

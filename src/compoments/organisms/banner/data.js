@@ -1,6 +1,6 @@
 const data = {
   id: 'banner',
-  title: 'Investing in Innovation,<br/><strong>Guided by Science</strong>',
+  title: 'Investing in Innovation,<br/><strong>Guided by Science</strong>.',
   description: '',
   buttonLabel: 'Explore',
   scrollLabel: 'SCROLL TO EXPLORE',

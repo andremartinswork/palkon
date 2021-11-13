@@ -4,11 +4,11 @@ const data = {
   items: [
     {
       label: 'Capital deployed',
-      number: '$800M'
+      number: '$300M'
     },
     {
       label: 'Portfolio Companies',
-      number: '15'
+      number: '~15'
     },
     {
       label: 'IPOs and Acquisitions',

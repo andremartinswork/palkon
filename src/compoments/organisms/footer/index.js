@@ -47,13 +47,13 @@ export default function Footer(props) {
               <Bottom>
                 <Col>
                   <Text className="play-16">{labelEmail}</Text>
-                  <a href={`mailto:${email}`} target="_top">
+                  <a href={`mailto:${email}`} target="_blank" rel="noreferrer">
                     <Text className="roboto-16">{email}</Text>
                   </a>
                 </Col>
                 <Col>
                   <Text className="play-16">{labelInternship}</Text>
-                  <a href={`mailto:${email}`} target="_top">
+                  <a href={`mailto:${email}`} target="_blank" rel="noreferrer">
                     <Text className="roboto-16">{internship}</Text>
                   </a>
                 </Col>

@@ -1,6 +1,6 @@
 const data = {
   id: 'advisors',
-  smallTitle: 'OUR SCIENTIFIC ADVISORS',
+  smallTitle: 'Scientific Advisors',
   title: 'Independent researchers, clinicians, and thought leaders broaden our perspective, expand our understanding, and augment internal research efforts.',
   items: [
     {

@@ -1,8 +1,8 @@
 const data = {
   id: 'philosophy',
   smallTitle: 'OUR INVESTMENT PHILOSOPHY',
-  title: 'Now is the time to aggressively invest in biopharma.',
-  description: 'We believe we are in the early stages of a decades-long cycle of unprecedented innovation in medicine. By investing in development stage healthcare companies, we can simultaneously catalyze innovation to address unmet medical needs and capture key value inflections',
+  title: 'Now is the time to invest aggressively in biopharma.',
+  description: 'We are in the early stages of a decades-long cycle of unprecedented innovation in medicine. By investing in development stage healthcare companies, we can simultaneously catalyze innovation to address unmet medical needs and capture key value inflections.',
   items: [
     {
       title: 'We are in a Golden Age for Therapeutics',
@@ -10,15 +10,15 @@ const data = {
     },
     {
       title: 'Innovation Drives Value',
-      description: 'We recognize the cost pressures faced by healthcare systems around the globe. Value is meaningfully created when innovation balances the benefits to patient, provider, and health system with long-term business sustainability. Thus, we are focused on major scientific advances, rather than “me too” products and other low value-creation strategies.'
+      description: 'We recognize the cost pressures faced by healthcare systems around the globe. Meaningful value is created when innovation balances the benefits to the patient provider, and health system with long-term business sustainability. Thus, we are focused on major scientific advances, rather than “me too” products and other low value-creation strategies.'
     },
     {
-      title: 'Science guides everything',
-      description: 'We look to science because the whole biopharma industry is driven by it as well. Because industry is following the data, we center our diligence and use our in-depth understanding of the underlying science in order to anticipate the trajectory of clinical development programs.'
+      title: 'Science Guides Everything',
+      description: 'The biopharma industry is fundamentally driven by science, as are we. By focusing our diligence on an in-depth understanding of the underlying science, we can invest with a shared perspective.'
     },
     {
-      title: 'Long-term partnership is key',
-      description: 'Palkon manages a concentrated investment portfolio, so we make meaningful time and capital commitments to our portfolio companies. We do not make half-hearted investments. Thus, once we partner with a company – we give that company our full attention, as well as access to our networks and resources. We recognize that drug and product development pathways are neither short nor linear, and we have the patience and experience to be long-term partners.'
+      title: 'Long-term Partnership is Key',
+      description: 'Palkon manages a concentrated portfolio, which enables us to make meaningful time and capital commitments to each of our portfolio companies. We give them our full attention, as well as access to our network and resources. Recognizing that R&D is neither a short nor linear path, we have the experience and patience to be long-term partners.'
     }
   ]
 }

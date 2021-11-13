@@ -1,5 +1,5 @@
 // REACT
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 // STYLED COMPONENTS
 import styled from "styled-components";
@@ -29,8 +29,6 @@ import ModalPortfolio from "../../molecules/modals/modalPortfolio";
 import { colors, spaces } from "../../../styles/theme";
 import { rem } from "polished";
 
-
-
 export default function Portfolio(props) {
   const { id, title, description, items } = props;
 
@@ -40,39 +38,28 @@ export default function Portfolio(props) {
   useEffect(() => {
     // INSTALL SWIPER MODULES
     SwiperCore.use([Pagination, Navigation]);
-  },[]) 
+  }, []);
 
   const toggleModal = (val) => {
     setIsOpen(!isOpen);
-    !isOpen && setSelected(val)
-  }
+    !isOpen && setSelected(val);
+  };
 
   return (
     <Section id={id} bgColor={colors.c_26386E}>
       <Bar center />
       <Space top="160" bottom="160">
         <Container lg>
-          <Text
-            tag="h2"
-            className="play-48"
-            editor
-            text={title}
-            color={colors.c_FFFFFF}
-            align="center"
-          />
-          <Align center>
-            <Space top="64" bottom="120">
-              <Text
-                tag="p"
-                className="roboto-16"
-                maxWidth="420px"
-                align="center"
-                color={colors.c_FFFFFF}
-              >
-                {description}
-              </Text>
-            </Space>
-          </Align>
+          <Space bottom="120">
+            <Text
+              tag="h2"
+              className="play-48"
+              editor
+              text={title}
+              color={colors.c_FFFFFF}
+              align="center"
+            />
+          </Space>
         </Container>
         <Overflow>
           <Container lg>
@@ -111,7 +98,9 @@ export default function Portfolio(props) {
                             {item.title}
                           </Text>
                         </Space>
-                        <Text className="roboto-16" ellipsis={3}>{item.description}</Text>
+                        <Text className="roboto-16" ellipsis={3}>
+                          {item.description}
+                        </Text>
                         <Space top="40">
                           <Button
                             type="button"
@@ -313,8 +302,8 @@ const Button = styled.button`
   border: none;
   background-color: transparent;
   color: ${colors.c_00BFFF}!important;
-  letter-spacing: normal!important;
-  font-weight: 400!important;
+  letter-spacing: normal !important;
+  font-weight: 400 !important;
   transition: all 0.5s ease;
 
   @media (hover: hover) and (pointer: fine) {

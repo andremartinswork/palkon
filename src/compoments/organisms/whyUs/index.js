@@ -134,6 +134,11 @@ const Content = styled.div`
   width: calc(((100vw - 1548px) / 2) + 1548px);
   height: 1024px;
   margin-left: auto;
+  background-color: ${colors.c_26386E};
+
+  img {
+    opacity: 0.8;
+  }
 
   @media screen and (max-width: 1630px) {
     width: 100%;

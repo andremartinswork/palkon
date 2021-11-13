@@ -60,7 +60,7 @@ export default function Advisors(props) {
                   <Fade key={String(index)} delay={150 * index}>
                     <Item>
                       <Wrapper>
-                        {item.image && item.image.href && (
+                        {/* {item.image && item.image.href && (
                           <Relative>
                             <Image
                               src={item.image.href}
@@ -70,12 +70,12 @@ export default function Advisors(props) {
                               objectPosition="center"
                             />
                           </Relative>
-                        )}
+                        )} */}
                         <div>
                           <Text className="play-24" lineHeight={1}>
                             {item.name}
                           </Text>
-                          <Space top="8">
+                          <Space top="16">
                             <Text
                               className="roboto-14"
                               spacing="normal"
