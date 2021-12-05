@@ -1,7 +1,7 @@
 const data = {
   id: 'team',
   smallTitle: 'OUR TEAM',
-  title: "Our investment team works relentlessly to identify companies developing future medical breakthrough. An institutional-grade operations team underpins the firm's infrastructure, providing a premium level of service.",
+  title: "Our investment team works relentlessly to identify companies developing future medical breakthroughs. An institutional-grade operations team underpins the firm's infrastructure, providing a premium level of service.",
   items: [
     {
       name: 'Shaheen Wirk',

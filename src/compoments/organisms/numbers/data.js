@@ -12,7 +12,7 @@ const data = {
     },
     {
       label: 'IPOs and Acquisitions',
-      number: '12'
+      number: '13'
     }
   ]
 }

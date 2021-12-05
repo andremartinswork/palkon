@@ -35,7 +35,7 @@ export default function Philosophy(props) {
             className="play-48"
             editor
             text={title}
-            maxWidth="500px"
+            maxWidth="600px"
           />
         </Container>
         <Container md>

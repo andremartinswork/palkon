@@ -5,7 +5,7 @@ export const colors = {
   c_26386E: '#26386E',
   c_364051: '#364051',
   c_F8FAFF: '#F8FAFF',
-  c_999DAA: '#999DAA',
+  c_999DAA: '#878a94',
   c_FFFFFF: '#FFFFFF'
 };
 

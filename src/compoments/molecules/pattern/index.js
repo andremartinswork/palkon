@@ -27,7 +27,7 @@ const Index = styled.div`
 `;
 const Background = styled.div`
   width: 100%;
-  height: 110vh;
+  height: 90vh;
   background: url("/patterns/pattern.svg");
   opacity: 0.1;
   

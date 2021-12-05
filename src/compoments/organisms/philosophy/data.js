@@ -2,7 +2,7 @@ const data = {
   id: 'philosophy',
   smallTitle: 'OUR INVESTMENT PHILOSOPHY',
   title: 'Now is the time to invest aggressively in biopharma.',
-  description: 'We are in the early stages of a decades-long cycle of unprecedented innovation in medicine. By investing in development stage healthcare companies, we can simultaneously catalyze innovation to address unmet medical needs and capture key value inflections.',
+  description: 'We are in the early stages of a decades-long cycle of unprecedented innovation in medicine. By investing in development stage healthcare companies, we can simultaneously catalyze innovation that addresses unmet medical needs and capture key value inflections.',
   items: [
     {
       title: 'We are in a Golden Age for Therapeutics',
@@ -10,15 +10,15 @@ const data = {
     },
     {
       title: 'Innovation Drives Value',
-      description: 'We recognize the cost pressures faced by healthcare systems around the globe. Meaningful value is created when innovation balances the benefits to the patient provider, and health system with long-term business sustainability. Thus, we are focused on major scientific advances, rather than “me too” products and other low value-creation strategies.'
+      description: 'We understand the cost pressures faced by healthcare systems around the globe. Innovation must balance benefit to the patient, provider, and health system in order to generate meaningful long-term value. Thus, we are focused on major scientific advances, rather than “me too” products and other low value-creation strategies.'
     },
     {
       title: 'Science Guides Everything',
-      description: 'The biopharma industry is fundamentally driven by science, as are we. By focusing our diligence on an in-depth understanding of the underlying science, we can invest with a shared perspective.'
+      description: 'The biopharma industry is driven by science, as are we. Focusing our due diligence on an in-depth understanding of the underlying science enables us to invest with a shared perspective.'
     },
     {
       title: 'Long-term Partnership is Key',
-      description: 'Palkon manages a concentrated portfolio, which enables us to make meaningful time and capital commitments to each of our portfolio companies. We give them our full attention, as well as access to our network and resources. Recognizing that R&D is neither a short nor linear path, we have the experience and patience to be long-term partners.'
+      description: 'Palkon manages a concentrated portfolio, which enables us to make meaningful time and capital commitments to our investments. We give each portfolio company our full attention, as well as access to our network and resources. We recognize that R&D is neither a short nor linear path, and have the experience and patience to be long-term partners.'
     }
   ]
 }
