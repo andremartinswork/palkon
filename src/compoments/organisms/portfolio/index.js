@@ -20,7 +20,6 @@ import Space from "../../atoms/space";
 import Bar from "../../atoms/bar";
 import Container from "../../atoms/container";
 import Text from "../../atoms/text";
-import Align from "../../atoms/align";
 
 // MOLECULES
 import ModalPortfolio from "../../molecules/modals/modalPortfolio";
@@ -29,16 +28,13 @@ import ModalPortfolio from "../../molecules/modals/modalPortfolio";
 import { colors, spaces } from "../../../styles/theme";
 import { rem } from "polished";
 
+SwiperCore.use([Pagination, Navigation]);
+
 export default function Portfolio(props) {
-  const { id, title, description, items } = props;
+  const { id, title, items } = props;
 
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(false);
-
-  useEffect(() => {
-    // INSTALL SWIPER MODULES
-    SwiperCore.use([Pagination, Navigation]);
-  }, []);
 
   const toggleModal = (val) => {
     setIsOpen(!isOpen);

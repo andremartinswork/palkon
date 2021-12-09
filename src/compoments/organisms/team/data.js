@@ -4,6 +4,10 @@ const data = {
   title: "Our investment team works relentlessly to identify companies developing future medical breakthroughs. An institutional-grade operations team underpins the firm's infrastructure, providing a premium level of service.",
   items: [
     {
+      image: {
+        href: '/images/team/Headshot_ShaheenWirk.png',
+        alt: 'Shaheen Wirk',
+      },
       name: 'Shaheen Wirk',
       job: 'Founder and Portfolio Manager',
       description: 'Dr. Wirk founded Palkon Capital in 2013 in partnership with Julian Robertson and Tiger Management. Prior to that, he was a senior analyst at Roberto Mignone’s Bridger Capital from 2001 to 2012. Throughout his career, Dr. Wirk has identified, researched, and invested in healthcare companies. He is responsible for managing Palkon Capital’s portfolio, guiding the investment staff’s research endeavors, and overseeing the rest of the firm. Previously, Dr. Wirk received training as a research scientist in oncology and trauma surgery at University of Texas MD Anderson Cancer Center, Rabin Medical Center through the National Institutes of Health Fogarty International Center, and Duke University Medical Center. He currently serves as Senior Advisor to the Board at Tvardi Therapeutics. Other healthcare-related experiences include work in information technology with MercuryMD and small business consulting to Paradigm Genetics. Dr. Wirk earned M.D., M.B.A., and B.S. degrees from Duke University.',
@@ -12,6 +16,10 @@ const data = {
       facebook: '',
     },
     {
+      image: {
+        href: '/images/team/Headshot_Sadeghi-Nejad.png',
+        alt: 'Nathan Sadeghi-Nejad',
+      },
       name: 'Nathan Sadeghi-Nejad',
       job: 'Partner',
       description: "Mr. Sadeghi-Nejad joined Palkon pre-launch as a Partner. Dr. Wirk and Mr. Sadeghi-Nejad have a long relationship that dates back to 2001, when they met while researching healthcare companies. In his capacity at Palkon, Mr. Sadeghi-Nejad identifies and researches life sciences companies and works alongside Dr. Wirk in the research process. Previously, Mr. Sadeghi-Nejad managed a ~$300 million healthcare portfolio for Highside Capital; during his four-year tenure, the portfolio's compound return exceeded both the S&P Health and MS Healthcare indices. Since starting his career in 1997, his research and investing experience has included all healthcare subsectors, with a particular focus on biopharma. Mr. Sadeghi-Nejad earned a B.A. from Columbia University.",
@@ -20,6 +28,10 @@ const data = {
       facebook: '',
     },
     {
+      image: {
+        href: '/images/team/Headshot_DanMiller.png',
+        alt: 'Dan Miller',
+      },
       name: 'Dan Miller',
       job: 'Blue River Senior Managing Director, HF Operations',
       description: 'Dan Miller joined Blue River Partners in 2019. His areas of expertise include counterparty management, ensuring fund accounting best practices are adhered to, and building robust and ',
@@ -28,6 +40,10 @@ const data = {
       facebook: '',
     },
     {
+      image: {
+        href: '/images/team/Headshot_MattHale.png',
+        alt: 'Matthew Hale',
+      },
       name: 'Matthew Hale',
       job: 'Blue River Manager, Hedge Fund Operations',
       description: 'Mr. Hale has over 5 years of experience at Blue River supporting a variety of different back and middle office operations. Mr. Hale has worked on many different',
@@ -36,6 +52,10 @@ const data = {
       facebook: '',
     },
     {
+      image: {
+        href: '/images/team/Headshot_BrandonOrtiz.png',
+        alt: 'Brandon Ortiz',
+      },
       name: 'Brandon Ortiz',
       job: 'Blue River Managing Director, Regulatory Compliance',
       description: 'As a Managing Director in Regulatory Compliance at Blue River, Mr. Ortiz assists Palkon with implementing and administering compliance programs.',
@@ -44,6 +64,10 @@ const data = {
       facebook: '',
     },
     {
+      image: {
+        href: '/images/team/Headshot_AnaBenitez.png',
+        alt: 'Ana Benitez',
+      },
       name: 'Ana Benitez',
       job: 'Office Manager / Executive Assistant',
       description: 'Ms. Benitez joined Palkon pre-launch to serve in an operational and administrative capacity at the firm where she supported the front office and assisted with various back office functions.',

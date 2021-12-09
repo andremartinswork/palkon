@@ -7,6 +7,9 @@ import styled from "styled-components";
 // REACT REVEAL
 import Fade from "react-reveal/Fade";
 
+// NEXT
+import Image from 'next/image';
+
 // ATOMS
 import Section from "../../atoms/section";
 import Space from "../../atoms/space";
@@ -55,6 +58,10 @@ export default function Team(props) {
                 items.map((item, index) => (
                   <Fade key={String(index)} delay={150 * index}>
                     <Item>
+                      <WrapperImage>
+                        <Image src={item.image.href} alt={item.image.alt} layout='fill' objectFit='cover' objectPosition="top" />
+                      </WrapperImage>
+                      <Content>
                       <Text className="play-24" lineHeight={1}>
                         {item.name}
                       </Text>
@@ -79,6 +86,7 @@ export default function Team(props) {
                       >
                         View more
                       </Button>
+                      </Content>
                     </Item>
                   </Fade>
                 ))}
@@ -128,13 +136,41 @@ const Items = styled.div`
   }
 `;
 const Item = styled.div`
-  padding-left: ${spaces["32"]};
-  padding-right: ${spaces["32"]};
-  padding-top: ${spaces["40"]};
-  padding-bottom: ${spaces["40"]};
   box-sizing: border-box;
   background-color: ${colors.c_FFFFFF};
   border-radius: 8px;
+`;
+const WrapperImage = styled.div`
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+  @media screen and (max-width: 1440px) {
+    height: 380px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    height: 320px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    height: 400px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 320px;
+  }
+  @media screen and (max-width: 578px) {
+    height: calc(100vw - 48px);
+  }
+`;
+const Content = styled.div`
+  padding-left: ${spaces["32"]};
+  padding-right: ${spaces["32"]};
+  padding-top: ${spaces["32"]};
+  padding-bottom: ${spaces["40"]};
 `;
 const Button = styled.button`
   padding: 0;
