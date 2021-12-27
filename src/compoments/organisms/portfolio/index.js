@@ -61,17 +61,24 @@ export default function Portfolio(props) {
           <Container lg>
             <WrapperSwiper>
               <Swiper
-                slidesPerView={"auto"}
+                slidesPerView={1}
+                spaceBetween={24} 
+                slidesPerGroup={1} 
+                loop={true}
+                loopFillGroupWithBlank={true}
                 pagination={true}
                 navigation={true}
-                spaceBetween={24}
                 freeMode={true}
                 grabCursor={true}
                 breakpoints={{
-                  768: {
+                  550: {
+                    slidesPerView: 2,
                     spaceBetween: 32,
+                    slidesPerGroup: 2,
                   },
                   1024: {
+                    slidesPerGroup: 3,
+                    slidesPerView: 3,
                     spaceBetween: 40,
                   },
                 }}
@@ -140,7 +147,7 @@ const WrapperSwiper = styled.div`
 
     .swiper-wrapper {
       .swiper-slide {
-        width: 400px;
+        // width: 400px;
         box-sizing: border-box;
         background-color: ${colors.c_FFFFFF};
         padding-left: ${spaces["32"]};

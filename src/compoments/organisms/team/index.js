@@ -58,10 +58,10 @@ export default function Team(props) {
                 items.map((item, index) => (
                   <Fade key={String(index)} delay={150 * index}>
                     <Item>
+                      <Content>
                       <WrapperImage>
                         <Image src={item.image.href} alt={item.image.alt} layout='fill' objectFit='cover' objectPosition="top" />
                       </WrapperImage>
-                      <Content>
                       <Text className="play-24" lineHeight={1}>
                         {item.name}
                       </Text>
@@ -143,10 +143,14 @@ const Item = styled.div`
 const WrapperImage = styled.div`
   position: relative;
   width: 100%;
-  height: 480px;
+  height: 400px;
   overflow: hidden;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  margin-bottom: ${spaces["32"]};
+  border-radius: 8px;
+
+  img {
+    filter: grayscale(100%);
+  }
 
   @media screen and (max-width: 1440px) {
     height: 380px;

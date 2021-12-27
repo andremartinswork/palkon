@@ -5,7 +5,7 @@ const data = {
   items: [
     {
       image: {
-        href: '/images/advisors/shahid_nimjee.jpeg'
+        href: '/images/advisors/shahid_nimjee.png'
       },
       name: 'Shahid Nimjee',
       job: 'Professor of Neurosurgery and Neuroscience',
@@ -14,7 +14,7 @@ const data = {
     },
     {
       image: {
-        href: '/images/advisors/ryan_fields.jpeg'
+        href: '/images/advisors/ryan_fields.png'
       },
       name: 'Ryan Fields',
       job: 'Chief of Surgical Oncology',
@@ -23,7 +23,7 @@ const data = {
     },
     {
       image: {
-        href: '/images/advisors/rahul_khurana.jpeg'
+        href: '/images/advisors/rahul_khurana.png'
       },
       name: 'Rahul N. Khurana',
       job: 'Vitreoretinal surgeon',

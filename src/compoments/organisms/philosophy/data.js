@@ -5,7 +5,7 @@ const data = {
   description: 'We are in the early stages of a decades-long cycle of unprecedented innovation in medicine. By investing in development stage healthcare companies, we can simultaneously catalyze innovation that addresses unmet medical needs and capture key value inflections.',
   items: [
     {
-      title: 'We are in a Golden Age for Therapeutics',
+      title: 'We are in the Golden Age for Therapeutics',
       description: 'Advances in genomics, computing power, and biomarkers have fueled the rise of precision and personalized medicine, while reducing the risks of drug development. As a result, early-stage biopharma companies can pursue big ideas more efficiently than ever, with increased odds of R&D success.'
     },
     {
@@ -18,7 +18,7 @@ const data = {
     },
     {
       title: 'Long-term Partnership is Key',
-      description: 'Palkon manages a concentrated portfolio, which enables us to make meaningful time and capital commitments to our investments. We give each portfolio company our full attention, as well as access to our network and resources. We recognize that R&D is neither a short nor linear path, and have the experience and patience to be long-term partners.'
+      description: 'Palkon manages a concentrated portfolio, which enables us to make meaningful time and capital commitments to our investments. We give each portfolio company our full attention, as well as access to our network and resources. We recognize that drug development is neither a short nor linear path, and have the experience and patience to be long-term partners.'
     }
   ]
 }

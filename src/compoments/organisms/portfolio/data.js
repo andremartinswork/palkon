@@ -5,12 +5,12 @@ const data = {
   items: [
     {
       logo: {
-        href: '/images/portfolio/logos/Dicerna.png',
-        alt: 'Dicerna',
+        href: '/images/portfolio/logos/Arena.png',
+        alt: 'Arena Pharmaceuticals',
       },
-      title: 'Dicerna',
-      description: 'Dicerna Pharmaceuticals is a biopharmaceutical company focused on discovering, developing and commercializing medicines that are designed to leverage ribonucleic acid interference (RNAi) to silence selectively genes that cause or contribute to disease. Using our proprietary GalXC™ and GalXC-Plus™ RNAi technologies,',
-      text: "Dicerna Pharmaceuticals is a biopharmaceutical company focused on discovering, developing and commercializing medicines that are designed to leverage ribonucleic acid interference (RNAi) to silence selectively genes that cause or contribute to disease. Using our proprietary GalXC™ and GalXC-Plus™ RNAi technologies, Dicerna is committed to developing RNAi-based therapies with the potential to treat both rare and more prevalent diseases. By silencing disease-causing genes, Dicerna’s GalXC platform has the potential to address conditions that are difficult to treat with other modalities. Initially focused on disease-causing genes in the liver, Dicerna has continued to innovate and is exploring new applications of its RNAi technology with GalXC-Plus, which expands on the functionality and application of our flagship liver-targeted GalXC technology to tissues and cell types outside the liver, and has the potential to treat diseases across multiple therapeutic areas. In addition to our own pipeline of core discovery and clinical candidates, Dicerna has established collaborative relationships with some of the world’s leading pharmaceutical companies, including Novo Nordisk A/S, Roche, Eli Lilly and Company, Alexion Pharmaceuticals, Inc., Boehringer Ingelheim International GmbH and Alnylam Pharmaceuticals, Inc. Between Dicerna and our collaborative partners, we currently have more than 20 active discovery, preclinical or clinical programs focused on cardiometabolic, viral, chronic liver and complement-mediated diseases, as well as neurodegenerative diseases and pain.",
+      title: 'Arena Pharmaceuticals',
+      description: 'Arena Pharmaceuticals is a team with a singular purpose – deliver important medicines to patients. In a rapidly changing global market, we work with a sense of urgency every day to understand the needs of all our stakeholders, identify bold.',
+      text: "Arena Pharmaceuticals is a team with a singular purpose – deliver important medicines to patients. In a rapidly changing global market, we work with a sense of urgency every day to understand the needs of all our stakeholders, identify bold ideas to get medicines to patients, and relentlessly execute until it’s done. We are developing a richly diversified portfolio of therapeutic candidates targeting gastroenterology, dermatology and cardiology. To fuel our growth, we are unlocking the value of our historical GPCR research with a sustainable discovery engine for broad portfolio expansion.",
       linkedIn: '',
       facebook: '',
       website: ''
@@ -23,6 +23,18 @@ const data = {
       title: 'Constellation Pharmaceuticals',
       description: 'Constellation Pharmaceuticals is a clinical-stage biopharmaceutical company developing novel therapeutics that selectively modulate gene expression to address serious unmet medical needs in patients with cancer.',
       text: "Constellation Pharmaceuticals is a clinical-stage biopharmaceutical company developing novel therapeutics that selectively modulate gene expression to address serious unmet medical needs in patients with cancer. The Company has a deep understanding of how epigenetic and chromatin modifications in cancer cells and in the tumor and immune microenvironment play a fundamental role in driving disease progression and drug resistance. Constellation is driving development of the BET inhibitor pelabresib for the treatment of myelofibrosis as well as the EZH2 inhibitor CPI-0209 for the treatment of advanced malignancies. The Company is also applying its broad research and development capabilities to explore other novel targets that directly and indirectly impact gene expression to fuel a sustainable pipeline of innovative small-molecule product candidates.",
+      linkedIn: '',
+      facebook: '',
+      website: ''
+    },
+    {
+      logo: {
+        href: '/images/portfolio/logos/Dicerna.png',
+        alt: 'Dicerna',
+      },
+      title: 'Dicerna',
+      description: 'Dicerna Pharmaceuticals is a biopharmaceutical company focused on discovering, developing and commercializing medicines that are designed to leverage ribonucleic acid interference (RNAi) to silence selectively genes that cause or contribute to disease. Using our proprietary GalXC™ and GalXC-Plus™ RNAi technologies,',
+      text: "Dicerna Pharmaceuticals is a biopharmaceutical company focused on discovering, developing and commercializing medicines that are designed to leverage ribonucleic acid interference (RNAi) to silence selectively genes that cause or contribute to disease. Using our proprietary GalXC™ and GalXC-Plus™ RNAi technologies, Dicerna is committed to developing RNAi-based therapies with the potential to treat both rare and more prevalent diseases. By silencing disease-causing genes, Dicerna’s GalXC platform has the potential to address conditions that are difficult to treat with other modalities. Initially focused on disease-causing genes in the liver, Dicerna has continued to innovate and is exploring new applications of its RNAi technology with GalXC-Plus, which expands on the functionality and application of our flagship liver-targeted GalXC technology to tissues and cell types outside the liver, and has the potential to treat diseases across multiple therapeutic areas. In addition to our own pipeline of core discovery and clinical candidates, Dicerna has established collaborative relationships with some of the world’s leading pharmaceutical companies, including Novo Nordisk A/S, Roche, Eli Lilly and Company, Alexion Pharmaceuticals, Inc., Boehringer Ingelheim International GmbH and Alnylam Pharmaceuticals, Inc. Between Dicerna and our collaborative partners, we currently have more than 20 active discovery, preclinical or clinical programs focused on cardiometabolic, viral, chronic liver and complement-mediated diseases, as well as neurodegenerative diseases and pain.",
       linkedIn: '',
       facebook: '',
       website: ''

@@ -41,7 +41,7 @@ export default function Advisors(props) {
       <Space top="160" bottom="80">
         <Container lg>
           <Space bottom="32">
-            <Text tag="h5" className="roboto-14" weight={500}>
+            <Text tag="h5" className="roboto-14" weight={500} uppercase>
               {smallTitle}
             </Text>
           </Space>
@@ -59,8 +59,7 @@ export default function Advisors(props) {
                 items.map((item, index) => (
                   <Fade key={String(index)} delay={150 * index}>
                     <Item>
-                      <Wrapper>
-                        {/* {item.image && item.image.href && (
+                    {item.image && item.image.href && (
                           <Relative>
                             <Image
                               src={item.image.href}
@@ -70,7 +69,9 @@ export default function Advisors(props) {
                               objectPosition="center"
                             />
                           </Relative>
-                        )} */}
+                        )}
+                      <Wrapper>
+                        
                         <div>
                           <Text className="play-24" lineHeight={1}>
                             {item.name}
@@ -163,11 +164,33 @@ const Wrapper = styled.div`
 `;
 const Relative = styled.div`
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 100%;
+  height: 400px;
   border-radius: 8px;
   overflow: hidden;
-  margin-right: 16px;
+  margin-bottom: ${spaces["32"]};
+
+  img {
+    filter: grayscale(100%);
+  }
+
+  @media screen and (max-width: 1440px) {
+    height: 380px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    height: 320px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    height: 400px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 320px;
+  }
+  @media screen and (max-width: 578px) {
+    height: calc(100vw - 48px);
+  }
 `;
 const Button = styled.button`
   padding: 0;

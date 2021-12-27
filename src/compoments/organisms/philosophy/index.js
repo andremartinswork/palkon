@@ -66,7 +66,7 @@ export default function Philosophy(props) {
                       <Space top="16">
                         <Text
                           tag="p"
-                          className="roboto-14"
+                          className="roboto-16"
                           spacing="normal"
                           lineHeight={rem("30px")}
                         >
