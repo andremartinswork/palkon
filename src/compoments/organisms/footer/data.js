@@ -9,11 +9,11 @@ const data = {
   address: '1688 Meridian Avenue,<br />Suite 700, Miami Beach,<br/>FL 33139.',
   items: [
     {
-      label: 'History',
-      section: 'about'
+      label: 'About',
+      section: 'history'
     },
     {
-      label: 'Why us',
+      label: 'Why Us',
       section: 'whyUs'
     },
     {

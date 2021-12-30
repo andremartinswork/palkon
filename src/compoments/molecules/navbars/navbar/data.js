@@ -1,7 +1,7 @@
 const data = {
   items: [
     {
-      label: 'History',
+      label: 'About',
       section: 'history'
     },
     {
