@@ -105,8 +105,8 @@ const data = {
         alt: 'KYTHERA Biopharmaceuticals',
       },
       title: 'Kythera Biopharmaceuticals',
-      description: 'Kythera Biopharmaceuticals, is a biopharmaceutical company focused on the discovery, development and commercialization of novel prescription',
-      text: "Kythera Biopharmaceuticals, is a biopharmaceutical company focused on the discovery, development and commercialization of novel prescription products for the aesthetic medicine market. In addition to its lead product KYBELLA™, KYTHERA also licensed the worldwide rights to setipiprant (KYTH-105), an early-stage potential treatment for hair loss. KYTHERA’s longer-term strategy is to leverage its biotechnology and aesthetics experience to expand its product portfolio and pipeline.",
+      description: 'Kythera Biopharmaceuticals is a biopharmaceutical company focused on the discovery, development and commercialization of novel prescription',
+      text: "Kythera Biopharmaceuticals is a biopharmaceutical company focused on the discovery, development and commercialization of novel prescription products for the aesthetic medicine market. In addition to its lead product KYBELLA™, KYTHERA also licensed the worldwide rights to setipiprant (KYTH-105), an early-stage potential treatment for hair loss. KYTHERA’s longer-term strategy is to leverage its biotechnology and aesthetics experience to expand its product portfolio and pipeline.",
       linkedIn: '',
       facebook: '',
       website: ''
